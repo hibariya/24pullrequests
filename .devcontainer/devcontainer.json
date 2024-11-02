@@ -1,0 +1,9 @@
+{
+    // See: https://code.visualstudio.com/docs/devcontainers/create-dev-container
+    //      https://containers.dev/implementors/spec/
+    "name": "hibariya/24pullrequests",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/usr/src/app",
+    "shutdownAction": "stopCompose"
+}
