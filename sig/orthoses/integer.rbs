@@ -1,0 +1,3 @@
+class Integer < ::Numeric
+  include ActiveSupport::NumericWithFormat
+end

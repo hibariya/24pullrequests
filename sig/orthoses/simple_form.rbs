@@ -1,0 +1,114 @@
+module SimpleForm
+end
+
+module SimpleForm::ActionViewExtensions
+end
+
+module SimpleForm::ActionViewExtensions::FormHelper
+end
+
+module SimpleForm::Components
+  extend ActiveSupport::Autoload
+end
+
+module SimpleForm::Components::Errors
+end
+
+module SimpleForm::Components::HTML5
+end
+
+module SimpleForm::Components::Hints
+end
+
+module SimpleForm::Components::LabelInput
+  extend ActiveSupport::Concern
+end
+
+module SimpleForm::Components::Labels
+  extend ActiveSupport::Concern
+end
+
+module SimpleForm::Components::Labels::ClassMethods
+end
+
+module SimpleForm::Components::Maxlength
+end
+
+module SimpleForm::Components::MinMax
+end
+
+module SimpleForm::Components::Minlength
+end
+
+module SimpleForm::Components::Pattern
+end
+
+module SimpleForm::Components::Placeholders
+end
+
+module SimpleForm::Components::Readonly
+end
+
+module SimpleForm::Helpers
+end
+
+module SimpleForm::Helpers::Autofocus
+end
+
+module SimpleForm::Helpers::Disabled
+end
+
+module SimpleForm::Helpers::Readonly
+end
+
+module SimpleForm::Helpers::Required
+end
+
+module SimpleForm::Helpers::Validators
+end
+
+module SimpleForm::Inputs
+  extend ActiveSupport::Autoload
+end
+
+class SimpleForm::Inputs::Base
+  def self.debug_missing_translation: () -> untyped
+  def debug_missing_translation: () -> untyped
+  def self.debug_missing_translation=: (untyped val) -> untyped
+  def debug_missing_translation=: (untyped val) -> untyped
+  # defined by `delegate` to: #@builder
+  def template: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@builder
+  def object: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@builder
+  def object_name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@builder
+  def lookup_model_names: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@builder
+  def lookup_action: (*untyped, **untyped) -> untyped
+  def self.default_options: () -> untyped
+  def self.default_options?: () -> bool
+  def self.default_options=: (untyped value) -> untyped
+  def default_options: () -> untyped
+  def default_options?: () -> bool
+  def default_options=: (untyped value) -> untyped
+  include ERB::Util
+  include ActionView::Helpers::TranslationHelper
+  include SimpleForm::Helpers::Autofocus
+  include SimpleForm::Helpers::Disabled
+  include SimpleForm::Helpers::Readonly
+  include SimpleForm::Helpers::Required
+  include SimpleForm::Helpers::Validators
+  include SimpleForm::Components::Errors
+  include SimpleForm::Components::Hints
+  include SimpleForm::Components::HTML5
+  include SimpleForm::Components::LabelInput
+  include SimpleForm::Components::Labels
+  extend SimpleForm::Components::Labels::ClassMethods
+  include SimpleForm::Components::Maxlength
+  include SimpleForm::Components::Minlength
+  include SimpleForm::Components::MinMax
+  include SimpleForm::Components::Pattern
+  include SimpleForm::Components::Placeholders
+  include SimpleForm::Components::Readonly
+end

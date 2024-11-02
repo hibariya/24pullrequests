@@ -1,0 +1,4 @@
+class PullRequestsDecorator < ::AppDecorator
+  include Draper::AutomaticDelegation
+  extend Draper::AutomaticDelegation::ClassMethods
+end

@@ -1,0 +1,5 @@
+module Singleton
+end
+
+module Singleton::SingletonClassMethods
+end

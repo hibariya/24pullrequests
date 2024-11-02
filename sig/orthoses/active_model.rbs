@@ -1,0 +1,191 @@
+module ActiveModel::API
+  extend ActiveSupport::Concern
+
+  include ActiveModel::AttributeAssignment
+
+  include ActiveModel::Validations
+
+  include ActiveModel::Conversion
+end
+
+module ActiveModel::Access
+end
+
+module ActiveModel::AttributeAssignment
+  include ActiveModel::ForbiddenAttributesProtection
+end
+
+module ActiveModel::AttributeMethods
+end
+
+module ActiveModel::AttributeMethods::ClassMethods
+end
+
+module ActiveModel::AttributeRegistration
+  extend ActiveSupport::Concern
+end
+
+module ActiveModel::AttributeRegistration::ClassMethods
+end
+
+module ActiveModel::Attributes
+  extend ActiveSupport::Concern
+
+  include ActiveModel::AttributeRegistration
+
+  include ActiveModel::AttributeMethods
+end
+
+module ActiveModel::Callbacks
+end
+
+module ActiveModel::Conversion
+  extend ActiveSupport::Concern
+end
+
+module ActiveModel::Conversion::ClassMethods
+end
+
+module ActiveModel::Dirty
+  extend ActiveSupport::Concern
+
+  include ActiveModel::AttributeMethods
+end
+
+class ActiveModel::EachValidator < ::ActiveModel::Validator
+end
+
+module ActiveModel::ForbiddenAttributesProtection
+end
+
+module ActiveModel::Naming
+end
+
+class ActiveModel::NullMutationTracker
+  include Singleton
+  extend Singleton::SingletonClassMethods
+end
+
+module ActiveModel::SecurePassword
+  extend ActiveSupport::Concern
+end
+
+module ActiveModel::SecurePassword::ClassMethods
+end
+
+module ActiveModel::Serializers::JSON
+end
+
+module ActiveModel::Translation
+  include ActiveModel::Naming
+end
+
+class ActiveModel::Type::Date < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Timezone
+end
+
+class ActiveModel::Type::DateTime < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Timezone
+  include ActiveModel::Type::Helpers::TimeValue
+end
+
+class ActiveModel::Type::Decimal < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Numeric
+end
+
+class ActiveModel::Type::Float < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Numeric
+end
+
+module ActiveModel::Type::Helpers::Mutable
+end
+
+module ActiveModel::Type::Helpers::Numeric
+end
+
+module ActiveModel::Type::Helpers::TimeValue
+end
+
+module ActiveModel::Type::Helpers::Timezone
+end
+
+class ActiveModel::Type::Integer < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Numeric
+end
+
+module ActiveModel::Type::SerializeCastValue
+  extend ActiveSupport::Concern
+end
+
+module ActiveModel::Type::SerializeCastValue::ClassMethods
+end
+
+module ActiveModel::Type::SerializeCastValue::DefaultImplementation
+end
+
+class ActiveModel::Type::Time < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Timezone
+  include ActiveModel::Type::Helpers::TimeValue
+end
+
+class ActiveModel::Type::Value
+  include ActiveModel::Type::SerializeCastValue
+  extend ActiveModel::Type::SerializeCastValue::ClassMethods
+  include ActiveModel::Type::SerializeCastValue::DefaultImplementation
+end
+
+module ActiveModel::Validations
+  extend ActiveSupport::Concern
+end
+
+module ActiveModel::Validations::Callbacks
+  extend ActiveSupport::Concern
+end
+
+module ActiveModel::Validations::Callbacks::ClassMethods
+end
+
+module ActiveModel::Validations::ClassMethods
+end
+
+module ActiveModel::Validations::Clusivity
+  include ActiveModel::Validations::ResolveValue
+end
+
+module ActiveModel::Validations::Comparability
+end
+
+class ActiveModel::Validations::ComparisonValidator < ::ActiveModel::EachValidator
+  include ActiveModel::Validations::Comparability
+  include ActiveModel::Validations::ResolveValue
+end
+
+class ActiveModel::Validations::ExclusionValidator < ::ActiveModel::EachValidator
+  include ActiveModel::Validations::Clusivity
+end
+
+class ActiveModel::Validations::FormatValidator < ::ActiveModel::EachValidator
+  include ActiveModel::Validations::ResolveValue
+end
+
+module ActiveModel::Validations::HelperMethods
+end
+
+class ActiveModel::Validations::InclusionValidator < ::ActiveModel::EachValidator
+  include ActiveModel::Validations::Clusivity
+end
+
+class ActiveModel::Validations::LengthValidator < ::ActiveModel::EachValidator
+  include ActiveModel::Validations::ResolveValue
+end
+
+class ActiveModel::Validations::NumericalityValidator < ::ActiveModel::EachValidator
+  include ActiveModel::Validations::Comparability
+  include ActiveModel::Validations::ResolveValue
+end
+
+module ActiveModel::Validations::ResolveValue
+end
+
+class ActiveModel::Validator
+end

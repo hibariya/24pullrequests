@@ -1,0 +1,10 @@
+class ThankYouMailer < ::ActionMailer::Base
+  def self.thank_you: (untyped user) -> ::ActionMailer::MessageDelivery
+  include ActionDispatch::Routing::UrlFor
+end
+
+module ThankYouMailer::HelperMethods
+  include ActionMailer::Base::HelperMethods
+
+  include ApplicationHelper
+end

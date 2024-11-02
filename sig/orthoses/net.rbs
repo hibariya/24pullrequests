@@ -1,0 +1,44 @@
+class Net::ProtoAuthError < ::Net::ProtocolError
+end
+
+class Net::ProtoFatalError < ::Net::ProtocolError
+end
+
+class Net::ProtoServerError < ::Net::ProtocolError
+end
+
+class Net::ProtoSyntaxError < ::Net::ProtocolError
+end
+
+class Net::ProtoUnknownError < ::Net::ProtocolError
+end
+
+class Net::ProtocolError < ::StandardError
+end
+
+class Net::SMTPAuthenticationError < ::Net::ProtoAuthError
+  include Net::SMTPError
+end
+
+module Net::SMTPError
+end
+
+class Net::SMTPFatalError < ::Net::ProtoFatalError
+  include Net::SMTPError
+end
+
+class Net::SMTPServerBusy < ::Net::ProtoServerError
+  include Net::SMTPError
+end
+
+class Net::SMTPSyntaxError < ::Net::ProtoSyntaxError
+  include Net::SMTPError
+end
+
+class Net::SMTPUnknownError < ::Net::ProtoUnknownError
+  include Net::SMTPError
+end
+
+class Net::SMTPUnsupportedCommand < ::Net::ProtocolError
+  include Net::SMTPError
+end

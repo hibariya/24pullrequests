@@ -1,0 +1,6 @@
+class GithubClient
+  # defined by `delegate` to: #client
+  def issue: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #client
+  def pull_request: (*untyped, **untyped) -> untyped
+end

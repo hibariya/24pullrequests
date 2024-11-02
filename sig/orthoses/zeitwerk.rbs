@@ -1,0 +1,5 @@
+module Zeitwerk
+end
+
+module Zeitwerk::ConstAdded
+end

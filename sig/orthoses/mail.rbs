@@ -1,0 +1,40 @@
+class Mail::Configuration
+  include Singleton
+  extend Singleton::SingletonClassMethods
+end
+
+module Mail::Constants
+end
+
+module Mail::Encodings
+  include Mail::Constants
+
+  extend Mail::Utilities
+end
+
+class Mail::Field
+  include Comparable
+end
+
+class Mail::Header
+  include Enumerable[untyped]
+end
+
+class Mail::Multibyte::Chars
+  include Comparable
+end
+
+module Mail::Multibyte::Unicode
+  extend Mail::Multibyte::Unicode
+end
+
+module Mail::ParserTools
+end
+
+module Mail::Parsers::DateTimeParser
+  extend Mail::ParserTools
+end
+
+module Mail::Utilities
+  extend Mail::Utilities
+end

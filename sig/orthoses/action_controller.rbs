@@ -1,0 +1,616 @@
+class ActionController::API < ::ActionController::Metal
+  def self.raise_on_open_redirects: () -> untyped
+  def raise_on_open_redirects: () -> untyped
+  def self.raise_on_missing_callback_actions: () -> untyped
+  def raise_on_missing_callback_actions: () -> untyped
+  def self.raise_on_open_redirects=: (untyped val) -> untyped
+  def raise_on_open_redirects=: (untyped val) -> untyped
+  def self.raise_on_missing_callback_actions=: (untyped val) -> untyped
+  def raise_on_missing_callback_actions=: (untyped val) -> untyped
+  def self.logger: () -> untyped
+  def self.logger=: (untyped value) -> untyped
+  def logger: () -> untyped
+  def logger=: (untyped value) -> untyped
+  def self.default_url_options: () -> untyped
+  def self.default_url_options?: () -> bool
+  def self.default_url_options=: (untyped value) -> untyped
+  def default_url_options: () -> untyped
+  def default_url_options?: () -> bool
+  def default_url_options=: (untyped value) -> untyped
+  def self.etaggers: () -> untyped
+  def self.etaggers?: () -> bool
+  def self.etaggers=: (untyped value) -> untyped
+  def etaggers: () -> untyped
+  def etaggers?: () -> bool
+  def etaggers=: (untyped value) -> untyped
+  def self.rescue_handlers: () -> untyped
+  def self.rescue_handlers?: () -> bool
+  def self.rescue_handlers=: (untyped value) -> untyped
+  def rescue_handlers: () -> untyped
+  def rescue_handlers?: () -> bool
+  def rescue_handlers=: (untyped value) -> untyped
+  def self.responder: () -> untyped
+  def self.responder?: () -> bool
+  def self.responder=: (untyped value) -> untyped
+  def responder: () -> untyped
+  def responder?: () -> bool
+  def responder=: (untyped value) -> untyped
+  def self.mimes_for_respond_to: () -> untyped
+  def self.mimes_for_respond_to?: () -> bool
+  def self.mimes_for_respond_to=: (untyped value) -> untyped
+  def mimes_for_respond_to: () -> untyped
+  def mimes_for_respond_to?: () -> bool
+  def mimes_for_respond_to=: (untyped value) -> untyped
+  def self.helpers_path: () -> untyped
+  def self.helpers_path?: () -> bool
+  def self.helpers_path=: (untyped value) -> untyped
+  def helpers_path: () -> untyped
+  def helpers_path?: () -> bool
+  def helpers_path=: (untyped value) -> untyped
+  def self.include_all_helpers: () -> untyped
+  def self.include_all_helpers?: () -> bool
+  def self.include_all_helpers=: (untyped value) -> untyped
+  def include_all_helpers: () -> untyped
+  def include_all_helpers?: () -> bool
+  def include_all_helpers=: (untyped value) -> untyped
+  include AbstractController::Rendering
+  include ActionView::ViewPaths
+  extend ActionView::ViewPaths::ClassMethods
+  include ActionController::UrlFor
+  include AbstractController::UrlFor
+  include ActionDispatch::Routing::UrlFor
+  extend AbstractController::UrlFor::ClassMethods
+  include ActionController::Redirecting
+  include AbstractController::Logger
+  include ActiveSupport::Benchmarkable
+  include ActionController::ApiRendering
+  include ActionView::Rendering
+  extend ActionView::Rendering::ClassMethods
+  include ActionController::Rendering
+  extend ActionController::Rendering::ClassMethods
+  include ActionController::Renderers::All
+  include ActionController::Renderers
+  extend ActionController::Renderers::ClassMethods
+  include ActionController::ConditionalGet
+  extend ActionController::ConditionalGet::ClassMethods
+  include ActionController::BasicImplicitRender
+  include ActionController::StrongParameters
+  include ActionController::RateLimiting
+  extend ActionController::RateLimiting::ClassMethods
+  include ActionController::DataStreaming
+  include ActionController::DefaultHeaders
+  extend ActionController::DefaultHeaders::ClassMethods
+  include ActionController::Logging
+  extend ActionController::Logging::ClassMethods
+  include AbstractController::Callbacks
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+  extend AbstractController::Callbacks::ClassMethods
+  include ActionController::Rescue
+  include ActiveSupport::Rescuable
+  extend ActiveSupport::Rescuable::ClassMethods
+  include ActionController::Instrumentation
+  extend ActionController::Instrumentation::ClassMethods
+  include ActionController::ParamsWrapper
+  extend ActionController::ParamsWrapper::ClassMethods
+  include ActionController::RespondWith
+  extend ActionController::RespondWith::ClassMethods
+  include ActionDispatch::Routing::RouteSet::MountedHelpers
+  extend ActionController::Railties::Helpers
+  include ActiveRecord::Railties::ControllerRuntime
+  extend ActiveRecord::Railties::ControllerRuntime::ClassMethods
+  include ActionController::Helpers
+  include AbstractController::Helpers
+  extend AbstractController::Helpers::ClassMethods
+  extend ActionController::Helpers::ClassMethods
+  include ActionController::ImplicitRender
+  include Draper::Compatibility::ApiOnly
+  include Draper::ViewContext
+  extend Draper::HelperSupport
+  extend Draper::DecoratesAssigned
+end
+
+module ActionController::AllowBrowser
+  extend ActiveSupport::Concern
+end
+
+module ActionController::AllowBrowser::ClassMethods
+end
+
+module ActionController::ApiRendering
+  extend ActiveSupport::Concern
+
+  include ActionView::Rendering
+end
+
+class ActionController::Base < ::ActionController::Metal
+  def self.raise_on_open_redirects: () -> untyped
+  def raise_on_open_redirects: () -> untyped
+  def self.raise_on_missing_callback_actions: () -> untyped
+  def raise_on_missing_callback_actions: () -> untyped
+  def self.raise_on_open_redirects=: (untyped val) -> untyped
+  def raise_on_open_redirects=: (untyped val) -> untyped
+  def self.raise_on_missing_callback_actions=: (untyped val) -> untyped
+  def raise_on_missing_callback_actions=: (untyped val) -> untyped
+  def self.asset_host: () -> untyped
+  def self.asset_host=: (untyped value) -> untyped
+  def asset_host: () -> untyped
+  def asset_host=: (untyped value) -> untyped
+  def self.assets_dir: () -> untyped
+  def self.assets_dir=: (untyped value) -> untyped
+  def assets_dir: () -> untyped
+  def assets_dir=: (untyped value) -> untyped
+  def self.javascripts_dir: () -> untyped
+  def self.javascripts_dir=: (untyped value) -> untyped
+  def javascripts_dir: () -> untyped
+  def javascripts_dir=: (untyped value) -> untyped
+  def self.stylesheets_dir: () -> untyped
+  def self.stylesheets_dir=: (untyped value) -> untyped
+  def stylesheets_dir: () -> untyped
+  def stylesheets_dir=: (untyped value) -> untyped
+  def self.default_asset_host_protocol: () -> untyped
+  def self.default_asset_host_protocol=: (untyped value) -> untyped
+  def default_asset_host_protocol: () -> untyped
+  def default_asset_host_protocol=: (untyped value) -> untyped
+  def self.relative_url_root: () -> untyped
+  def self.relative_url_root=: (untyped value) -> untyped
+  def relative_url_root: () -> untyped
+  def relative_url_root=: (untyped value) -> untyped
+  def self.logger: () -> untyped
+  def self.logger=: (untyped value) -> untyped
+  def logger: () -> untyped
+  def logger=: (untyped value) -> untyped
+  def self.default_static_extension: () -> untyped
+  def self.default_static_extension=: (untyped value) -> untyped
+  def default_static_extension: () -> untyped
+  def default_static_extension=: (untyped value) -> untyped
+  def self.perform_caching: () -> untyped
+  def self.perform_caching=: (untyped value) -> untyped
+  def perform_caching: () -> untyped
+  def perform_caching=: (untyped value) -> untyped
+  def self.enable_fragment_cache_logging: () -> untyped
+  def self.enable_fragment_cache_logging=: (untyped value) -> untyped
+  def enable_fragment_cache_logging: () -> untyped
+  def enable_fragment_cache_logging=: (untyped value) -> untyped
+  def self.request_forgery_protection_token: () -> untyped
+  def self.request_forgery_protection_token=: (untyped value) -> untyped
+  def request_forgery_protection_token: () -> untyped
+  def request_forgery_protection_token=: (untyped value) -> untyped
+  def self.forgery_protection_strategy: () -> untyped
+  def self.forgery_protection_strategy=: (untyped value) -> untyped
+  def forgery_protection_strategy: () -> untyped
+  def forgery_protection_strategy=: (untyped value) -> untyped
+  def self.allow_forgery_protection: () -> untyped
+  def self.allow_forgery_protection=: (untyped value) -> untyped
+  def allow_forgery_protection: () -> untyped
+  def allow_forgery_protection=: (untyped value) -> untyped
+  def self.log_warning_on_csrf_failure: () -> untyped
+  def self.log_warning_on_csrf_failure=: (untyped value) -> untyped
+  def log_warning_on_csrf_failure: () -> untyped
+  def log_warning_on_csrf_failure=: (untyped value) -> untyped
+  def self.forgery_protection_origin_check: () -> untyped
+  def self.forgery_protection_origin_check=: (untyped value) -> untyped
+  def forgery_protection_origin_check: () -> untyped
+  def forgery_protection_origin_check=: (untyped value) -> untyped
+  def self.per_form_csrf_tokens: () -> untyped
+  def self.per_form_csrf_tokens=: (untyped value) -> untyped
+  def per_form_csrf_tokens: () -> untyped
+  def per_form_csrf_tokens=: (untyped value) -> untyped
+  def self.csrf_token_storage_strategy: () -> untyped
+  def self.csrf_token_storage_strategy=: (untyped value) -> untyped
+  def csrf_token_storage_strategy: () -> untyped
+  def csrf_token_storage_strategy=: (untyped value) -> untyped
+  def self.helpers_path: () -> untyped
+  def self.helpers_path?: () -> bool
+  def self.helpers_path=: (untyped value) -> untyped
+  def helpers_path: () -> untyped
+  def helpers_path?: () -> bool
+  def helpers_path=: (untyped value) -> untyped
+  def self.include_all_helpers: () -> untyped
+  def self.include_all_helpers?: () -> bool
+  def self.include_all_helpers=: (untyped value) -> untyped
+  def include_all_helpers: () -> untyped
+  def include_all_helpers?: () -> bool
+  def include_all_helpers=: (untyped value) -> untyped
+  def self.default_url_options: () -> untyped
+  def self.default_url_options?: () -> bool
+  def self.default_url_options=: (untyped value) -> untyped
+  def default_url_options: () -> untyped
+  def default_url_options?: () -> bool
+  def default_url_options=: (untyped value) -> untyped
+  def self.etaggers: () -> untyped
+  def self.etaggers?: () -> bool
+  def self.etaggers=: (untyped value) -> untyped
+  def etaggers: () -> untyped
+  def etaggers?: () -> bool
+  def etaggers=: (untyped value) -> untyped
+  def self.etag_with_template_digest: () -> untyped
+  def self.etag_with_template_digest?: () -> bool
+  def self.etag_with_template_digest=: (untyped value) -> untyped
+  def etag_with_template_digest: () -> untyped
+  def etag_with_template_digest?: () -> bool
+  def etag_with_template_digest=: (untyped value) -> untyped
+  def self.fragment_cache_keys: () -> untyped
+  def self.fragment_cache_keys?: () -> bool
+  def self.fragment_cache_keys=: (untyped value) -> untyped
+  def fragment_cache_keys: () -> untyped
+  def fragment_cache_keys?: () -> bool
+  def fragment_cache_keys=: (untyped value) -> untyped
+  def self.rescue_handlers: () -> untyped
+  def self.rescue_handlers?: () -> bool
+  def self.rescue_handlers=: (untyped value) -> untyped
+  def rescue_handlers: () -> untyped
+  def rescue_handlers?: () -> bool
+  def rescue_handlers=: (untyped value) -> untyped
+  def self.responder: () -> untyped
+  def self.responder?: () -> bool
+  def self.responder=: (untyped value) -> untyped
+  def responder: () -> untyped
+  def responder?: () -> bool
+  def responder=: (untyped value) -> untyped
+  def self.mimes_for_respond_to: () -> untyped
+  def self.mimes_for_respond_to?: () -> bool
+  def self.mimes_for_respond_to=: (untyped value) -> untyped
+  def mimes_for_respond_to: () -> untyped
+  def mimes_for_respond_to?: () -> bool
+  def mimes_for_respond_to=: (untyped value) -> untyped
+  include AbstractController::Rendering
+  include ActionView::ViewPaths
+  extend ActionView::ViewPaths::ClassMethods
+  include AbstractController::Translation
+  include AbstractController::AssetPaths
+  include ActionController::Helpers
+  include AbstractController::Helpers
+  extend AbstractController::Helpers::ClassMethods
+  extend ActionController::Helpers::ClassMethods
+  include ActionController::UrlFor
+  include AbstractController::UrlFor
+  include ActionDispatch::Routing::UrlFor
+  extend AbstractController::UrlFor::ClassMethods
+  include ActionController::Redirecting
+  include AbstractController::Logger
+  include ActiveSupport::Benchmarkable
+  include ActionView::Layouts
+  include ActionView::Rendering
+  extend ActionView::Rendering::ClassMethods
+  extend ActionView::Layouts::ClassMethods
+  include ActionController::Rendering
+  extend ActionController::Rendering::ClassMethods
+  include ActionController::Renderers::All
+  include ActionController::Renderers
+  extend ActionController::Renderers::ClassMethods
+  include ActionController::ConditionalGet
+  extend ActionController::ConditionalGet::ClassMethods
+  include ActionController::EtagWithTemplateDigest
+  include ActionController::EtagWithFlash
+  include ActionController::Caching
+  include AbstractController::Caching
+  include AbstractController::Caching::Fragments
+  extend AbstractController::Caching::Fragments::ClassMethods
+  extend AbstractController::Caching::ClassMethods
+  extend AbstractController::Caching::ConfigMethods
+  include ActionController::MimeResponds
+  include ActionController::ImplicitRender
+  include ActionController::StrongParameters
+  include ActionController::ParameterEncoding
+  extend ActionController::ParameterEncoding::ClassMethods
+  include ActionController::Cookies
+  include ActionController::Flash
+  extend ActionController::Flash::ClassMethods
+  include ActionController::FormBuilder
+  extend ActionController::FormBuilder::ClassMethods
+  include ActionController::RequestForgeryProtection
+  include AbstractController::Callbacks
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+  extend AbstractController::Callbacks::ClassMethods
+  extend ActionController::RequestForgeryProtection::ClassMethods
+  include ActionController::ContentSecurityPolicy
+  extend ActionController::ContentSecurityPolicy::ClassMethods
+  include ActionController::PermissionsPolicy
+  extend ActionController::PermissionsPolicy::ClassMethods
+  include ActionController::RateLimiting
+  extend ActionController::RateLimiting::ClassMethods
+  include ActionController::AllowBrowser
+  extend ActionController::AllowBrowser::ClassMethods
+  include ActionController::Streaming
+  include ActionController::DataStreaming
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  extend ActionController::HttpAuthentication::Basic::ControllerMethods::ClassMethods
+  include ActionController::HttpAuthentication::Digest::ControllerMethods
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+  include ActionController::DefaultHeaders
+  extend ActionController::DefaultHeaders::ClassMethods
+  include ActionController::Logging
+  extend ActionController::Logging::ClassMethods
+  include ActionController::Rescue
+  include ActiveSupport::Rescuable
+  extend ActiveSupport::Rescuable::ClassMethods
+  include ActionController::Instrumentation
+  extend ActionController::Instrumentation::ClassMethods
+  include ActionController::ParamsWrapper
+  extend ActionController::ParamsWrapper::ClassMethods
+  extend Responders::ControllerMethod
+  include ActionController::RespondWith
+  extend ActionController::RespondWith::ClassMethods
+  include ActionDispatch::Routing::RouteSet::MountedHelpers
+  extend ActionController::Railties::Helpers
+  include ActiveRecord::Railties::ControllerRuntime
+  extend ActiveRecord::Railties::ControllerRuntime::ClassMethods
+  include Draper::ViewContext
+  extend Draper::HelperSupport
+  extend Draper::DecoratesAssigned
+end
+
+module ActionController::Base::HelperMethods
+end
+
+module ActionController::BasicImplicitRender
+end
+
+module ActionController::Caching
+  extend ActiveSupport::Concern
+end
+
+module ActionController::ConditionalGet
+  extend ActiveSupport::Concern
+
+  include ActionController::Head
+end
+
+module ActionController::ConditionalGet::ClassMethods
+end
+
+module ActionController::ContentSecurityPolicy
+  extend ActiveSupport::Concern
+
+  include AbstractController::Helpers
+
+  include AbstractController::Callbacks
+end
+
+module ActionController::ContentSecurityPolicy::ClassMethods
+end
+
+module ActionController::Cookies
+  extend ActiveSupport::Concern
+end
+
+module ActionController::DataStreaming
+  extend ActiveSupport::Concern
+
+  include ActionController::Rendering
+end
+
+module ActionController::DefaultHeaders
+  extend ActiveSupport::Concern
+end
+
+module ActionController::DefaultHeaders::ClassMethods
+end
+
+module ActionController::EtagWithFlash
+  extend ActiveSupport::Concern
+
+  include ActionController::ConditionalGet
+end
+
+module ActionController::EtagWithTemplateDigest
+  extend ActiveSupport::Concern
+
+  include ActionController::ConditionalGet
+end
+
+module ActionController::Flash
+  extend ActiveSupport::Concern
+end
+
+module ActionController::Flash::ClassMethods
+end
+
+module ActionController::FormBuilder
+  extend ActiveSupport::Concern
+end
+
+module ActionController::FormBuilder::ClassMethods
+end
+
+module ActionController::Head
+end
+
+module ActionController::Helpers
+  extend ActiveSupport::Concern
+
+  include AbstractController::Helpers
+end
+
+module ActionController::Helpers::ClassMethods
+end
+
+module ActionController::HttpAuthentication::Basic
+  extend ActionController::HttpAuthentication::Basic
+end
+
+module ActionController::HttpAuthentication::Basic::ControllerMethods
+  extend ActiveSupport::Concern
+end
+
+module ActionController::HttpAuthentication::Basic::ControllerMethods::ClassMethods
+end
+
+module ActionController::HttpAuthentication::Digest
+  extend ActionController::HttpAuthentication::Digest
+end
+
+module ActionController::HttpAuthentication::Digest::ControllerMethods
+end
+
+module ActionController::HttpAuthentication::Token
+  extend ActionController::HttpAuthentication::Token
+end
+
+module ActionController::HttpAuthentication::Token::ControllerMethods
+end
+
+module ActionController::ImplicitRender
+  include ActionController::BasicImplicitRender
+end
+
+module ActionController::Instrumentation
+  extend ActiveSupport::Concern
+
+  include AbstractController::Logger
+end
+
+module ActionController::Instrumentation::ClassMethods
+end
+
+module ActionController::Logging
+  extend ActiveSupport::Concern
+end
+
+module ActionController::Logging::ClassMethods
+end
+
+class ActionController::Metal < ::AbstractController::Base
+  def self.middleware_stack: () -> untyped
+  def self.middleware_stack?: () -> bool
+  def self.middleware_stack=: (untyped value) -> untyped
+  def middleware_stack: () -> untyped
+  def middleware_stack?: () -> bool
+  def middleware_stack=: (untyped value) -> untyped
+end
+
+module ActionController::MimeResponds
+end
+
+class ActionController::MimeResponds::Collector
+  include AbstractController::Collector
+end
+
+module ActionController::ParameterEncoding
+  extend ActiveSupport::Concern
+end
+
+module ActionController::ParameterEncoding::ClassMethods
+end
+
+module ActionController::ParamsWrapper
+  extend ActiveSupport::Concern
+end
+
+module ActionController::ParamsWrapper::ClassMethods
+end
+
+module ActionController::PermissionsPolicy
+  extend ActiveSupport::Concern
+end
+
+module ActionController::PermissionsPolicy::ClassMethods
+end
+
+module ActionController::Railties::Helpers
+end
+
+module ActionController::RateLimiting
+  extend ActiveSupport::Concern
+end
+
+module ActionController::RateLimiting::ClassMethods
+end
+
+module ActionController::Redirecting
+  extend ActiveSupport::Concern
+
+  include AbstractController::Logger
+
+  include ActionController::UrlFor
+end
+
+class ActionController::Renderer
+end
+
+module ActionController::Renderers
+  extend ActiveSupport::Concern
+end
+
+module ActionController::Renderers::All
+  extend ActiveSupport::Concern
+
+  include ActionController::Renderers
+end
+
+module ActionController::Renderers::ClassMethods
+end
+
+module ActionController::Rendering
+  extend ActiveSupport::Concern
+end
+
+module ActionController::Rendering::ClassMethods
+  # defined by `delegate` to: untyped#renderer
+  def render: (*untyped, **untyped) -> untyped
+end
+
+module ActionController::RequestForgeryProtection
+  extend ActiveSupport::Concern
+
+  include AbstractController::Helpers
+
+  include AbstractController::Callbacks
+end
+
+module ActionController::RequestForgeryProtection::ClassMethods
+end
+
+module ActionController::Rescue
+  extend ActiveSupport::Concern
+
+  include ActiveSupport::Rescuable
+end
+
+module ActionController::RespondWith
+  extend ActiveSupport::Concern
+end
+
+module ActionController::RespondWith::ClassMethods
+end
+
+class ActionController::Responder
+  # defined by `delegate` to: #controller
+  def head: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #controller
+  def render: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #controller
+  def redirect_to: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #request
+  def get?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #request
+  def post?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #request
+  def patch?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #request
+  def put?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #request
+  def delete?: (*untyped, **untyped) -> untyped
+  def self.error_status: () -> untyped
+  def self.error_status=: (untyped value) -> untyped
+  def error_status: () -> untyped
+  def self.redirect_status: () -> untyped
+  def self.redirect_status=: (untyped value) -> untyped
+  def redirect_status: () -> untyped
+end
+
+module ActionController::Streaming
+end
+
+module ActionController::StrongParameters
+end
+
+module ActionController::UrlFor
+  extend ActiveSupport::Concern
+
+  include AbstractController::UrlFor
+end

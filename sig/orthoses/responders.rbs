@@ -1,0 +1,5 @@
+module Responders
+end
+
+module Responders::ControllerMethod
+end

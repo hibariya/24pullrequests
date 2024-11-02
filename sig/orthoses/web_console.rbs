@@ -1,0 +1,20 @@
+module WebConsole
+end
+
+class WebConsole::Middleware
+  def self.mount_point: () -> untyped
+  def mount_point: () -> untyped
+  def self.whiny_requests: () -> untyped
+  def whiny_requests: () -> untyped
+  def self.mount_point=: (untyped val) -> untyped
+  def mount_point=: (untyped val) -> untyped
+  def self.whiny_requests=: (untyped val) -> untyped
+  def whiny_requests=: (untyped val) -> untyped
+end
+
+class WebConsole::Request < ::ActionDispatch::Request
+  def self.permissions: () -> untyped
+  def permissions: () -> untyped
+  def self.permissions=: (untyped val) -> untyped
+  def permissions=: (untyped val) -> untyped
+end

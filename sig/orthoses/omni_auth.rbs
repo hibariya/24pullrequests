@@ -1,0 +1,16 @@
+module OmniAuth
+end
+
+module OmniAuth::Strategies
+end
+
+class OmniAuth::Strategies::Developer
+  include OmniAuth::Strategy
+  extend OmniAuth::Strategy::ClassMethods
+end
+
+module OmniAuth::Strategy
+end
+
+module OmniAuth::Strategy::ClassMethods
+end

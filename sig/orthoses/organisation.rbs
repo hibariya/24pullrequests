@@ -1,0 +1,878 @@
+class Organisation < ::ApplicationRecord
+  def self.with_any_contributions: () -> Organisation::ActiveRecord_Relation
+  def self.random: () -> Organisation::ActiveRecord_Relation
+  def self.by_login: (untyped login) -> Organisation::ActiveRecord_Relation
+  def self.order_by_contributions: () -> Organisation::ActiveRecord_Relation
+  extend _ActiveRecord_Relation_ClassMethods[Organisation, Organisation::ActiveRecord_Relation, ::Integer]
+  extend Organisation::ActiveRecord_Persistence_ClassMethods
+  include Organisation::GeneratedAssociationMethods
+  include Organisation::GeneratedAttributeMethods
+end
+
+class Organisation::ActiveRecord_AssociationRelation < ::ActiveRecord::AssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include Organisation::GeneratedRelationMethods
+end
+
+class Organisation::ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+  include _ActiveRecord_Relation[Organisation, ::Integer]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include Organisation::GeneratedRelationMethods
+end
+
+class Organisation::ActiveRecord_DisableJoinsAssociationRelation < ::ActiveRecord::DisableJoinsAssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include Organisation::GeneratedRelationMethods
+end
+
+module Organisation::ActiveRecord_Persistence_ClassMethods
+  def create: (?id: ::Integer, ?login: ::String?, ?avatar_url: ::String?, ?github_id: ::Integer?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, ?contribution_count: ::Integer?, **untyped) ?{ (Organisation) -> void } -> Organisation
+            | (::Array[Hash[Symbol, untyped]]) ?{ (Organisation) -> void } -> ::Array[Organisation]
+
+  def create!: (?id: ::Integer, ?login: ::String?, ?avatar_url: ::String?, ?github_id: ::Integer?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, ?contribution_count: ::Integer?, **untyped) ?{ (Organisation) -> void } -> Organisation
+             | (::Array[Hash[Symbol, untyped]]) ?{ (Organisation) -> void } -> ::Array[Organisation]
+
+  def build: (?id: ::Integer, ?login: ::String?, ?avatar_url: ::String?, ?github_id: ::Integer?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, ?contribution_count: ::Integer?, **untyped) ?{ (Organisation) -> void } -> Organisation
+           | (::Array[Hash[Symbol, untyped]]) ?{ (Organisation) -> void } -> ::Array[Organisation]
+end
+
+class Organisation::ActiveRecord_Relation < ::ActiveRecord::Relation
+  include Organisation::GeneratedRelationMethods
+  include _ActiveRecord_Relation[Organisation, ::Integer]
+  include Enumerable[Organisation]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+module Organisation::GeneratedAssociationMethods
+  def contributions: () -> ::Contribution::ActiveRecord_Associations_CollectionProxy
+
+  def contributions=: (::Contribution::ActiveRecord_Associations_CollectionProxy | Array[Contribution]) -> (::Contribution::ActiveRecord_Associations_CollectionProxy | Array[Contribution])
+
+  def contribution_ids: () -> Array[Integer]
+
+  def contribution_ids=: (Array[Integer]) -> Array[Integer]
+end
+
+module Organisation::GeneratedAttributeMethods
+  attr_accessor id: ::Integer
+
+  def id_before_type_cast: () -> ::Integer
+
+  def id_for_database: () -> ::Integer
+
+  def id_came_from_user?: () -> bool
+
+  def id?: () -> bool
+
+  def id_previously_changed?: () -> bool
+
+  def id_changed?: () -> bool
+
+  def id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def id_will_change!: () -> void
+
+  def id_was: () -> ::Integer?
+
+  def id_previous_change: () -> Array[::Integer?]?
+
+  def id_previously_was: () -> ::Integer?
+
+  def restore_id!: () -> void
+
+  def clear_id_change: () -> void
+
+  def saved_change_to_id?: () -> bool
+
+  def saved_change_to_id: () -> Array[::Integer?]?
+
+  def id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_id?: () -> bool
+
+  def id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def id_in_database: () -> ::Integer?
+
+  attr_accessor login: ::String?
+
+  def login_before_type_cast: () -> ::String?
+
+  def login_for_database: () -> ::String?
+
+  def login_came_from_user?: () -> bool
+
+  def login?: () -> bool
+
+  def login_previously_changed?: () -> bool
+
+  def login_changed?: () -> bool
+
+  def login_change: () -> [ ::String?, ::String? ]
+
+  def login_will_change!: () -> void
+
+  def login_was: () -> ::String?
+
+  def login_previous_change: () -> Array[::String?]?
+
+  def login_previously_was: () -> ::String?
+
+  def restore_login!: () -> void
+
+  def clear_login_change: () -> void
+
+  def saved_change_to_login?: () -> bool
+
+  def saved_change_to_login: () -> Array[::String?]?
+
+  def login_before_last_save: () -> ::String?
+
+  def will_save_change_to_login?: () -> bool
+
+  def login_change_to_be_saved: () -> Array[::String?]?
+
+  def login_in_database: () -> ::String?
+
+  attr_accessor avatar_url: ::String?
+
+  def avatar_url_before_type_cast: () -> ::String?
+
+  def avatar_url_for_database: () -> ::String?
+
+  def avatar_url_came_from_user?: () -> bool
+
+  def avatar_url?: () -> bool
+
+  def avatar_url_previously_changed?: () -> bool
+
+  def avatar_url_changed?: () -> bool
+
+  def avatar_url_change: () -> [ ::String?, ::String? ]
+
+  def avatar_url_will_change!: () -> void
+
+  def avatar_url_was: () -> ::String?
+
+  def avatar_url_previous_change: () -> Array[::String?]?
+
+  def avatar_url_previously_was: () -> ::String?
+
+  def restore_avatar_url!: () -> void
+
+  def clear_avatar_url_change: () -> void
+
+  def saved_change_to_avatar_url?: () -> bool
+
+  def saved_change_to_avatar_url: () -> Array[::String?]?
+
+  def avatar_url_before_last_save: () -> ::String?
+
+  def will_save_change_to_avatar_url?: () -> bool
+
+  def avatar_url_change_to_be_saved: () -> Array[::String?]?
+
+  def avatar_url_in_database: () -> ::String?
+
+  attr_accessor github_id: ::Integer?
+
+  def github_id_before_type_cast: () -> ::Integer?
+
+  def github_id_for_database: () -> ::Integer?
+
+  def github_id_came_from_user?: () -> bool
+
+  def github_id?: () -> bool
+
+  def github_id_previously_changed?: () -> bool
+
+  def github_id_changed?: () -> bool
+
+  def github_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def github_id_will_change!: () -> void
+
+  def github_id_was: () -> ::Integer?
+
+  def github_id_previous_change: () -> Array[::Integer?]?
+
+  def github_id_previously_was: () -> ::Integer?
+
+  def restore_github_id!: () -> void
+
+  def clear_github_id_change: () -> void
+
+  def saved_change_to_github_id?: () -> bool
+
+  def saved_change_to_github_id: () -> Array[::Integer?]?
+
+  def github_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_github_id?: () -> bool
+
+  def github_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def github_id_in_database: () -> ::Integer?
+
+  attr_accessor created_at: ::ActiveSupport::TimeWithZone
+
+  def created_at_before_type_cast: () -> ::ActiveSupport::TimeWithZone
+
+  def created_at_for_database: () -> ::ActiveSupport::TimeWithZone
+
+  def created_at_came_from_user?: () -> bool
+
+  def created_at?: () -> bool
+
+  def created_at_previously_changed?: () -> bool
+
+  def created_at_changed?: () -> bool
+
+  def created_at_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def created_at_will_change!: () -> void
+
+  def created_at_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def created_at_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_created_at!: () -> void
+
+  def clear_created_at_change: () -> void
+
+  def saved_change_to_created_at?: () -> bool
+
+  def saved_change_to_created_at: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_created_at?: () -> bool
+
+  def created_at_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_in_database: () -> ::ActiveSupport::TimeWithZone?
+
+  attr_accessor updated_at: ::ActiveSupport::TimeWithZone
+
+  def updated_at_before_type_cast: () -> ::ActiveSupport::TimeWithZone
+
+  def updated_at_for_database: () -> ::ActiveSupport::TimeWithZone
+
+  def updated_at_came_from_user?: () -> bool
+
+  def updated_at?: () -> bool
+
+  def updated_at_previously_changed?: () -> bool
+
+  def updated_at_changed?: () -> bool
+
+  def updated_at_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def updated_at_will_change!: () -> void
+
+  def updated_at_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def updated_at_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_updated_at!: () -> void
+
+  def clear_updated_at_change: () -> void
+
+  def saved_change_to_updated_at?: () -> bool
+
+  def saved_change_to_updated_at: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_updated_at?: () -> bool
+
+  def updated_at_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_in_database: () -> ::ActiveSupport::TimeWithZone?
+
+  attr_accessor contribution_count: ::Integer?
+
+  def contribution_count_before_type_cast: () -> ::Integer?
+
+  def contribution_count_for_database: () -> ::Integer?
+
+  def contribution_count_came_from_user?: () -> bool
+
+  def contribution_count?: () -> bool
+
+  def contribution_count_previously_changed?: () -> bool
+
+  def contribution_count_changed?: () -> bool
+
+  def contribution_count_change: () -> [ ::Integer?, ::Integer? ]
+
+  def contribution_count_will_change!: () -> void
+
+  def contribution_count_was: () -> ::Integer?
+
+  def contribution_count_previous_change: () -> Array[::Integer?]?
+
+  def contribution_count_previously_was: () -> ::Integer?
+
+  def restore_contribution_count!: () -> void
+
+  def clear_contribution_count_change: () -> void
+
+  def saved_change_to_contribution_count?: () -> bool
+
+  def saved_change_to_contribution_count: () -> Array[::Integer?]?
+
+  def contribution_count_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_contribution_count?: () -> bool
+
+  def contribution_count_change_to_be_saved: () -> Array[::Integer?]?
+
+  def contribution_count_in_database: () -> ::Integer?
+end
+
+module Organisation::GeneratedRelationMethods
+  def with_any_contributions: (*untyped, **untyped) -> untyped
+
+  def random: (*untyped, **untyped) -> untyped
+
+  def by_login: (*untyped, **untyped) -> untyped
+
+  def order_by_contributions: (*untyped, **untyped) -> untyped
+
+  def __callbacks: (*untyped, **untyped) -> untyped
+
+  def defined_enums: (*untyped, **untyped) -> untyped
+
+  def find_by_login!: (*untyped, **untyped) -> untyped
+
+  def counter_cached_association_names: (*untyped, **untyped) -> untyped
+
+  def find_by_login: (*untyped, **untyped) -> untyped
+
+  def _validators: (*untyped, **untyped) -> untyped
+
+  def create_from_github: (*untyped, **untyped) -> untyped
+
+  def _reflections: (*untyped, **untyped) -> untyped
+
+  include Kaminari::ConfigurationMethods::ClassMethods
+
+  include Draper::Decoratable::ClassMethods
+
+  include Kaminari::ActiveRecordExtension::ClassMethods
+
+  include ActiveRecord::Normalization::ClassMethods
+
+  include ActiveRecord::Suppressor::ClassMethods
+
+  include ActiveRecord::SignedId::ClassMethods
+
+  include ActiveRecord::TokenFor::ClassMethods
+
+  include ActiveRecord::SecureToken::ClassMethods
+
+  include ActiveRecord::Store::ClassMethods
+
+  include ActiveRecord::Reflection::ClassMethods
+
+  include ActiveRecord::NoTouching::ClassMethods
+
+  include ActiveRecord::Transactions::ClassMethods
+
+  include ActiveRecord::NestedAttributes::ClassMethods
+
+  include ActiveRecord::AutosaveAssociation::ClassMethods
+
+  include ActiveRecord::SecurePassword::ClassMethods
+
+  include ActiveModel::SecurePassword::ClassMethods
+
+  include ActiveRecord::Associations::ClassMethods
+
+  include ActiveRecord::Timestamp::ClassMethods
+
+  include ActiveModel::Validations::Callbacks::ClassMethods
+
+  include ActiveRecord::Callbacks::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Serialization::ClassMethods
+
+  include ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
+
+  include ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Write::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Read::ClassMethods
+
+  include ActiveRecord::AttributeMethods::ClassMethods
+
+  include ActiveModel::AttributeMethods::ClassMethods
+
+  include ActiveRecord::Encryption::EncryptableRecord::ClassMethods
+
+  include ActiveRecord::Locking::Optimistic::ClassMethods
+
+  include ActiveRecord::Attributes::ClassMethods
+
+  include ActiveModel::AttributeRegistration::ClassMethods
+
+  include ActiveRecord::CounterCache::ClassMethods
+
+  include ActiveRecord::Validations::ClassMethods
+
+  include ActiveRecord::Integration::ClassMethods
+
+  include ActiveRecord::Sanitization::ClassMethods
+
+  include ActiveRecord::Scoping::Named::ClassMethods
+
+  include ActiveRecord::Scoping::Default::ClassMethods
+
+  include ActiveRecord::Scoping::ClassMethods
+
+  include ActiveRecord::Inheritance::ClassMethods
+
+  include ActiveRecord::ModelSchema::ClassMethods
+
+  include ActiveRecord::ReadonlyAttributes::ClassMethods
+
+  include ActiveRecord::Persistence::ClassMethods
+
+  include ActiveRecord::Core::ClassMethods
+
+  include ActiveRecord::Aggregations::ClassMethods
+
+  include ActiveRecord::Delegation::DelegateCache
+
+  include ActiveRecord::Enum
+
+  include ActiveRecord::DelegatedType
+
+  include ActiveRecord::DynamicMatchers
+
+  include ActiveRecord::Translation
+
+  include ActiveRecord::Querying
+
+  include ActiveRecord::QueryCache::ClassMethods
+
+  include ActiveRecord::ConnectionHandling
+
+  include ActiveSupport::Benchmarkable
+
+  include ActiveModel::Conversion::ClassMethods
+
+  include ActiveModel::Validations::HelperMethods
+
+  include ActiveModel::Translation
+
+  include ActiveSupport::DescendantsTracker
+
+  include ActiveSupport::Callbacks::ClassMethods
+
+  include ActiveModel::Callbacks
+
+  include ActiveModel::Naming
+
+  include ActiveModel::Validations::ClassMethods
+
+  include ActiveSupport::DescendantsTracker::ReloadedClassesFiltering
+
+  include Orthoses::LazyTracePoint::MethodAddedHook
+
+  include Orthoses::Mixin::Hook
+
+  include Zeitwerk::ConstAdded
+
+  include Module::Concerning
+end
+
+class Organisation::HABTM_Users < ::ActiveRecord::Base
+  extend _ActiveRecord_Relation_ClassMethods[Organisation::HABTM_Users, Organisation::HABTM_Users::ActiveRecord_Relation, ::Integer]
+  extend Organisation::HABTM_Users::ActiveRecord_Persistence_ClassMethods
+  include Organisation::HABTM_Users::GeneratedAssociationMethods
+  include Organisation::HABTM_Users::GeneratedAttributeMethods
+  include Kaminari::ActiveRecordModelExtension
+  include Kaminari::ConfigurationMethods
+  extend Kaminari::ConfigurationMethods::ClassMethods
+end
+
+class Organisation::HABTM_Users::ActiveRecord_AssociationRelation < ::ActiveRecord::AssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include Organisation::HABTM_Users::GeneratedRelationMethods
+end
+
+class Organisation::HABTM_Users::ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+  include _ActiveRecord_Relation[Organisation::HABTM_Users, ::Integer]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include Organisation::HABTM_Users::GeneratedRelationMethods
+end
+
+class Organisation::HABTM_Users::ActiveRecord_DisableJoinsAssociationRelation < ::ActiveRecord::DisableJoinsAssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include Organisation::HABTM_Users::GeneratedRelationMethods
+end
+
+module Organisation::HABTM_Users::ActiveRecord_Persistence_ClassMethods
+  def create: (?id: ::Integer, ?user_id: ::Integer?, ?organisation_id: ::Integer?, **untyped) ?{ (Organisation::HABTM_Users) -> void } -> Organisation::HABTM_Users
+            | (::Array[Hash[Symbol, untyped]]) ?{ (Organisation::HABTM_Users) -> void } -> ::Array[Organisation::HABTM_Users]
+
+  def create!: (?id: ::Integer, ?user_id: ::Integer?, ?organisation_id: ::Integer?, **untyped) ?{ (Organisation::HABTM_Users) -> void } -> Organisation::HABTM_Users
+             | (::Array[Hash[Symbol, untyped]]) ?{ (Organisation::HABTM_Users) -> void } -> ::Array[Organisation::HABTM_Users]
+
+  def build: (?id: ::Integer, ?user_id: ::Integer?, ?organisation_id: ::Integer?, **untyped) ?{ (Organisation::HABTM_Users) -> void } -> Organisation::HABTM_Users
+           | (::Array[Hash[Symbol, untyped]]) ?{ (Organisation::HABTM_Users) -> void } -> ::Array[Organisation::HABTM_Users]
+end
+
+class Organisation::HABTM_Users::ActiveRecord_Relation < ::ActiveRecord::Relation
+  include Organisation::HABTM_Users::GeneratedRelationMethods
+  include _ActiveRecord_Relation[Organisation::HABTM_Users, ::Integer]
+  include Enumerable[Organisation::HABTM_Users]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+end
+
+module Organisation::HABTM_Users::GeneratedAssociationMethods
+  def left_side: () -> Organisation?
+
+  def left_side=: (Organisation?) -> Organisation?
+
+  def reload_left_side: () -> Organisation?
+
+  def build_left_side: (?untyped attributes) ?{ (Organisation) -> void } -> Organisation
+
+  def create_left_side: (?untyped attributes) ?{ (Organisation) -> void } -> Organisation
+
+  def create_left_side!: (?untyped attributes) ?{ (Organisation) -> void } -> Organisation
+
+  def user: () -> User?
+
+  def user=: (User?) -> User?
+
+  def reload_user: () -> User?
+
+  def build_user: (?untyped attributes) ?{ (User) -> void } -> User
+
+  def create_user: (?untyped attributes) ?{ (User) -> void } -> User
+
+  def create_user!: (?untyped attributes) ?{ (User) -> void } -> User
+end
+
+module Organisation::HABTM_Users::GeneratedAttributeMethods
+  attr_accessor id: ::Integer
+
+  def id_before_type_cast: () -> ::Integer
+
+  def id_for_database: () -> ::Integer
+
+  def id_came_from_user?: () -> bool
+
+  def id?: () -> bool
+
+  def id_previously_changed?: () -> bool
+
+  def id_changed?: () -> bool
+
+  def id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def id_will_change!: () -> void
+
+  def id_was: () -> ::Integer?
+
+  def id_previous_change: () -> Array[::Integer?]?
+
+  def id_previously_was: () -> ::Integer?
+
+  def restore_id!: () -> void
+
+  def clear_id_change: () -> void
+
+  def saved_change_to_id?: () -> bool
+
+  def saved_change_to_id: () -> Array[::Integer?]?
+
+  def id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_id?: () -> bool
+
+  def id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def id_in_database: () -> ::Integer?
+
+  attr_accessor user_id: ::Integer?
+
+  def user_id_before_type_cast: () -> ::Integer?
+
+  def user_id_for_database: () -> ::Integer?
+
+  def user_id_came_from_user?: () -> bool
+
+  def user_id?: () -> bool
+
+  def user_id_previously_changed?: () -> bool
+
+  def user_id_changed?: () -> bool
+
+  def user_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def user_id_will_change!: () -> void
+
+  def user_id_was: () -> ::Integer?
+
+  def user_id_previous_change: () -> Array[::Integer?]?
+
+  def user_id_previously_was: () -> ::Integer?
+
+  def restore_user_id!: () -> void
+
+  def clear_user_id_change: () -> void
+
+  def saved_change_to_user_id?: () -> bool
+
+  def saved_change_to_user_id: () -> Array[::Integer?]?
+
+  def user_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_user_id?: () -> bool
+
+  def user_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def user_id_in_database: () -> ::Integer?
+
+  attr_accessor organisation_id: ::Integer?
+
+  def organisation_id_before_type_cast: () -> ::Integer?
+
+  def organisation_id_for_database: () -> ::Integer?
+
+  def organisation_id_came_from_user?: () -> bool
+
+  def organisation_id?: () -> bool
+
+  def organisation_id_previously_changed?: () -> bool
+
+  def organisation_id_changed?: () -> bool
+
+  def organisation_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def organisation_id_will_change!: () -> void
+
+  def organisation_id_was: () -> ::Integer?
+
+  def organisation_id_previous_change: () -> Array[::Integer?]?
+
+  def organisation_id_previously_was: () -> ::Integer?
+
+  def restore_organisation_id!: () -> void
+
+  def clear_organisation_id_change: () -> void
+
+  def saved_change_to_organisation_id?: () -> bool
+
+  def saved_change_to_organisation_id: () -> Array[::Integer?]?
+
+  def organisation_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_organisation_id?: () -> bool
+
+  def organisation_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def organisation_id_in_database: () -> ::Integer?
+end
+
+module Organisation::HABTM_Users::GeneratedRelationMethods
+  def __callbacks: (*untyped, **untyped) -> untyped
+
+  def name: (*untyped, **untyped) -> untyped
+
+  def name=: (*untyped, **untyped) -> untyped
+
+  def defined_enums: (*untyped, **untyped) -> untyped
+
+  def left_model=: (*untyped, **untyped) -> untyped
+
+  def add_left_association: (*untyped, **untyped) -> untyped
+
+  def table_name_resolver=: (*untyped, **untyped) -> untyped
+
+  def page: (*untyped, **untyped) -> untyped
+
+  def left_model: (*untyped, **untyped) -> untyped
+
+  def table_name_resolver: (*untyped, **untyped) -> untyped
+
+  def left_reflection: (*untyped, **untyped) -> untyped
+
+  def _validators: (*untyped, **untyped) -> untyped
+
+  def left_reflection=: (*untyped, **untyped) -> untyped
+
+  def right_reflection=: (*untyped, **untyped) -> untyped
+
+  def right_reflection: (*untyped, **untyped) -> untyped
+
+  def counter_cached_association_names: (*untyped, **untyped) -> untyped
+
+  def table_name: (*untyped, **untyped) -> untyped
+
+  def add_right_association: (*untyped, **untyped) -> untyped
+
+  def compute_type: (*untyped, **untyped) -> untyped
+
+  def connection_pool: (*untyped, **untyped) -> untyped
+
+  def _reflections: (*untyped, **untyped) -> untyped
+
+  include Kaminari::ConfigurationMethods::ClassMethods
+
+  include Draper::Decoratable::ClassMethods
+
+  include Kaminari::ActiveRecordExtension::ClassMethods
+
+  include ActiveRecord::Normalization::ClassMethods
+
+  include ActiveRecord::Suppressor::ClassMethods
+
+  include ActiveRecord::SignedId::ClassMethods
+
+  include ActiveRecord::TokenFor::ClassMethods
+
+  include ActiveRecord::SecureToken::ClassMethods
+
+  include ActiveRecord::Store::ClassMethods
+
+  include ActiveRecord::Reflection::ClassMethods
+
+  include ActiveRecord::NoTouching::ClassMethods
+
+  include ActiveRecord::Transactions::ClassMethods
+
+  include ActiveRecord::NestedAttributes::ClassMethods
+
+  include ActiveRecord::AutosaveAssociation::ClassMethods
+
+  include ActiveRecord::SecurePassword::ClassMethods
+
+  include ActiveModel::SecurePassword::ClassMethods
+
+  include ActiveRecord::Associations::ClassMethods
+
+  include ActiveRecord::Timestamp::ClassMethods
+
+  include ActiveModel::Validations::Callbacks::ClassMethods
+
+  include ActiveRecord::Callbacks::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Serialization::ClassMethods
+
+  include ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
+
+  include ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Write::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Read::ClassMethods
+
+  include ActiveRecord::AttributeMethods::ClassMethods
+
+  include ActiveModel::AttributeMethods::ClassMethods
+
+  include ActiveRecord::Encryption::EncryptableRecord::ClassMethods
+
+  include ActiveRecord::Locking::Optimistic::ClassMethods
+
+  include ActiveRecord::Attributes::ClassMethods
+
+  include ActiveModel::AttributeRegistration::ClassMethods
+
+  include ActiveRecord::CounterCache::ClassMethods
+
+  include ActiveRecord::Validations::ClassMethods
+
+  include ActiveRecord::Integration::ClassMethods
+
+  include ActiveRecord::Sanitization::ClassMethods
+
+  include ActiveRecord::Scoping::Named::ClassMethods
+
+  include ActiveRecord::Scoping::Default::ClassMethods
+
+  include ActiveRecord::Scoping::ClassMethods
+
+  include ActiveRecord::Inheritance::ClassMethods
+
+  include ActiveRecord::ModelSchema::ClassMethods
+
+  include ActiveRecord::ReadonlyAttributes::ClassMethods
+
+  include ActiveRecord::Persistence::ClassMethods
+
+  include ActiveRecord::Core::ClassMethods
+
+  include ActiveRecord::Aggregations::ClassMethods
+
+  include ActiveRecord::Delegation::DelegateCache
+
+  include ActiveRecord::Enum
+
+  include ActiveRecord::DelegatedType
+
+  include ActiveRecord::DynamicMatchers
+
+  include ActiveRecord::Translation
+
+  include ActiveRecord::Querying
+
+  include ActiveRecord::QueryCache::ClassMethods
+
+  include ActiveRecord::ConnectionHandling
+
+  include ActiveSupport::Benchmarkable
+
+  include ActiveModel::Conversion::ClassMethods
+
+  include ActiveModel::Validations::HelperMethods
+
+  include ActiveModel::Translation
+
+  include ActiveSupport::DescendantsTracker
+
+  include ActiveSupport::Callbacks::ClassMethods
+
+  include ActiveModel::Callbacks
+
+  include ActiveModel::Naming
+
+  include ActiveModel::Validations::ClassMethods
+
+  include ActiveSupport::DescendantsTracker::ReloadedClassesFiltering
+
+  include Orthoses::LazyTracePoint::MethodAddedHook
+
+  include Orthoses::Mixin::Hook
+
+  include Zeitwerk::ConstAdded
+
+  include Module::Concerning
+end

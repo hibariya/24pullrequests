@@ -1,0 +1,3 @@
+class Object < ::BasicObject
+  prepend ActiveSupport::Dependencies::RequireDependency
+end

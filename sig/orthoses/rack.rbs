@@ -1,0 +1,15 @@
+module Rack::Request::Env
+end
+
+module Rack::Request::Helpers
+end
+
+class Rack::Session::Abstract::Persisted
+end
+
+class Rack::Session::Abstract::PersistedSecure < ::Rack::Session::Abstract::Persisted
+end
+
+class Rack::Session::Abstract::SessionHash
+  include Enumerable[untyped]
+end

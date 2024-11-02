@@ -1,0 +1,5 @@
+class Module
+end
+
+module Module::Concerning
+end

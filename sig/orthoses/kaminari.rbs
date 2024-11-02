@@ -1,0 +1,39 @@
+module Kaminari::ActionViewExtension
+end
+
+module Kaminari::ActionViewExtension::LogSubscriberSilencer
+end
+
+module Kaminari::ActiveRecordExtension
+  extend ActiveSupport::Concern
+end
+
+module Kaminari::ActiveRecordExtension::ClassMethods
+end
+
+module Kaminari::ActiveRecordModelExtension
+  extend ActiveSupport::Concern
+end
+
+module Kaminari::ConfigurationMethods
+end
+
+module Kaminari::ConfigurationMethods::ClassMethods
+end
+
+module Kaminari::Helpers
+end
+
+module Kaminari::Helpers::HelperMethods
+  include Kaminari::Helpers::UrlHelper
+end
+
+class Kaminari::Helpers::Paginator < ::Kaminari::Helpers::Tag
+  include ActionView::Context
+end
+
+class Kaminari::Helpers::Tag
+end
+
+module Kaminari::Helpers::UrlHelper
+end

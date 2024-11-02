@@ -1,0 +1,3 @@
+class Float < ::Numeric
+  include ActiveSupport::NumericWithFormat
+end

@@ -1,0 +1,44 @@
+class ApplicationRecord < ::ActiveRecord::Base
+  include ApplicationRecord::GeneratedAttributeMethods
+  include ApplicationRecord::GeneratedAssociationMethods
+  include Kaminari::ActiveRecordModelExtension
+  include Kaminari::ConfigurationMethods
+  extend Kaminari::ConfigurationMethods::ClassMethods
+end
+
+class ApplicationRecord::ActiveRecord_AssociationRelation < ::ActiveRecord::AssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_DisableJoinsAssociationRelation < ::ActiveRecord::DisableJoinsAssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+class ApplicationRecord::ActiveRecord_Relation < ::ActiveRecord::Relation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ActiveRecord::Base::GeneratedRelationMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+module ApplicationRecord::GeneratedAssociationMethods
+end
+
+module ApplicationRecord::GeneratedAttributeMethods
+end
+
+module ApplicationRecord::GeneratedRelationMethods
+end

@@ -1,0 +1,10 @@
+class ConfirmationMailer < ::ActionMailer::Base
+  def self.confirmation: (untyped user) -> ::ActionMailer::MessageDelivery
+  include ActionDispatch::Routing::UrlFor
+end
+
+module ConfirmationMailer::HelperMethods
+  include ActionMailer::Base::HelperMethods
+
+  include ApplicationHelper
+end

@@ -1,0 +1,8 @@
+module Thor::Actions
+end
+
+module Thor::Actions::ClassMethods
+end
+
+class Thor::Group
+end

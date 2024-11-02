@@ -1,0 +1,119 @@
+module ActiveSupport::Autoload
+end
+
+module ActiveSupport::Benchmarkable
+end
+
+module ActiveSupport::Cache::MemoryStore::DupCoder
+  extend ActiveSupport::Cache::MemoryStore::DupCoder
+end
+
+module ActiveSupport::Cache::SerializerWithFallback
+end
+
+module ActiveSupport::Cache::SerializerWithFallback::Marshal70WithFallback
+  include ActiveSupport::Cache::SerializerWithFallback
+
+  extend ActiveSupport::Cache::SerializerWithFallback::Marshal70WithFallback
+end
+
+module ActiveSupport::Cache::SerializerWithFallback::Marshal71WithFallback
+  include ActiveSupport::Cache::SerializerWithFallback
+
+  extend ActiveSupport::Cache::SerializerWithFallback::Marshal71WithFallback
+end
+
+module ActiveSupport::Cache::SerializerWithFallback::MessagePackWithFallback
+  include ActiveSupport::Cache::SerializerWithFallback
+
+  extend ActiveSupport::Cache::SerializerWithFallback::MessagePackWithFallback
+end
+
+module ActiveSupport::Cache::SerializerWithFallback::PassthroughWithFallback
+  include ActiveSupport::Cache::SerializerWithFallback
+
+  extend ActiveSupport::Cache::SerializerWithFallback::PassthroughWithFallback
+end
+
+class ActiveSupport::Cache::Store
+  def self.logger: () -> untyped
+  def logger: () -> untyped
+  def self.raise_on_invalid_cache_expiration_time: () -> untyped
+  def raise_on_invalid_cache_expiration_time: () -> untyped
+  def self.logger=: (untyped val) -> untyped
+  def logger=: (untyped val) -> untyped
+  def self.raise_on_invalid_cache_expiration_time=: (untyped val) -> untyped
+  def raise_on_invalid_cache_expiration_time=: (untyped val) -> untyped
+end
+
+module ActiveSupport::Callbacks
+end
+
+module ActiveSupport::Callbacks::ClassMethods
+end
+
+module ActiveSupport::Concern
+end
+
+class ActiveSupport::Concurrency::LoadInterlockAwareMonitor < ::Monitor
+  include ActiveSupport::Concurrency::LoadInterlockAwareMonitorMixin
+end
+
+module ActiveSupport::Concurrency::LoadInterlockAwareMonitorMixin
+end
+
+module ActiveSupport::Concurrency::NullLock
+  extend ActiveSupport::Concurrency::NullLock
+end
+
+class ActiveSupport::Concurrency::ShareLock
+  include MonitorMixin
+end
+
+class ActiveSupport::Concurrency::ThreadLoadInterlockAwareMonitor
+  prepend ActiveSupport::Concurrency::LoadInterlockAwareMonitorMixin
+end
+
+module ActiveSupport::Configurable
+  extend ActiveSupport::Concern
+end
+
+module ActiveSupport::Configurable::ClassMethods
+end
+
+module ActiveSupport::Dependencies::RequireDependency : BasicObject
+end
+
+module ActiveSupport::DescendantsTracker
+end
+
+module ActiveSupport::DescendantsTracker::ReloadedClassesFiltering
+end
+
+class ActiveSupport::LogSubscriber < ::ActiveSupport::Subscriber
+end
+
+class ActiveSupport::Multibyte::Chars
+  # defined by `delegate` to: untyped#wrapped_string
+  def <=>: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#wrapped_string
+  def =~: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#wrapped_string
+  def match?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#wrapped_string
+  def acts_like_string?: (*untyped, **untyped) -> untyped
+  include Comparable
+end
+
+module ActiveSupport::NumericWithFormat
+end
+
+module ActiveSupport::Rescuable
+  extend ActiveSupport::Concern
+end
+
+module ActiveSupport::Rescuable::ClassMethods
+end
+
+class ActiveSupport::Subscriber
+end

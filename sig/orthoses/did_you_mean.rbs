@@ -1,0 +1,5 @@
+module DidYouMean
+end
+
+module DidYouMean::Correctable
+end

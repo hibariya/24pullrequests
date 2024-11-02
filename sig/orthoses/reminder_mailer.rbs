@@ -1,0 +1,12 @@
+class ReminderMailer < ::ActionMailer::Base
+  def self.daily: (untyped user) -> ::ActionMailer::MessageDelivery
+  def self.weekly: (untyped user) -> ::ActionMailer::MessageDelivery
+  def self.november: (untyped user) -> ::ActionMailer::MessageDelivery
+  include ActionDispatch::Routing::UrlFor
+end
+
+module ReminderMailer::HelperMethods
+  include ActionMailer::Base::HelperMethods
+
+  include ApplicationHelper
+end

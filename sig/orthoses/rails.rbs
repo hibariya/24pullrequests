@@ -1,0 +1,42 @@
+module Rails::Application::Bootstrap
+  include Rails::Initializable
+
+  extend Rails::Initializable::ClassMethods
+end
+
+module Rails::Application::Finisher
+  include Rails::Initializable
+
+  extend Rails::Initializable::ClassMethods
+end
+
+class Rails::Application::RoutesReloader
+  # defined by `delegate` to: untyped#updater
+  def execute_if_updated: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#updater
+  def execute: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#updater
+  def updated?: (*untyped, **untyped) -> untyped
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+end
+
+module Rails::Generators::Actions
+end
+
+class Rails::Generators::Base < ::Thor::Group
+  include Thor::Actions
+  extend Thor::Actions::ClassMethods
+  include Rails::Generators::Actions
+end
+
+class Rails::Generators::NamedBase < ::Rails::Generators::Base
+  include Coffee::Rails::JsHook
+end
+
+module Rails::Initializable
+end
+
+module Rails::Initializable::ClassMethods
+end

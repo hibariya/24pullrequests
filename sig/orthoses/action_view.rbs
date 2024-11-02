@@ -1,0 +1,274 @@
+class ActionView::AbstractRenderer
+  # defined by `delegate` to: #@lookup_context
+  def template_exists?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@lookup_context
+  def any_templates?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@lookup_context
+  def formats: (*untyped, **untyped) -> untyped
+end
+
+class ActionView::Base
+  def self.debug_missing_translation: () -> untyped
+  def debug_missing_translation: () -> untyped
+  def self.field_error_proc: () -> untyped
+  def field_error_proc: () -> untyped
+  def self.streaming_completion_on_exception: () -> untyped
+  def streaming_completion_on_exception: () -> untyped
+  def self.default_formats: () -> untyped
+  def default_formats: () -> untyped
+  def self.automatically_disable_submit_tag: () -> untyped
+  def automatically_disable_submit_tag: () -> untyped
+  def self.annotate_rendered_view_with_filenames: () -> untyped
+  def annotate_rendered_view_with_filenames: () -> untyped
+  def self.default_form_builder: () -> untyped
+  def self.debug_missing_translation=: (untyped val) -> untyped
+  def debug_missing_translation=: (untyped val) -> untyped
+  def self.field_error_proc=: (untyped val) -> untyped
+  def field_error_proc=: (untyped val) -> untyped
+  def self.streaming_completion_on_exception=: (untyped val) -> untyped
+  def streaming_completion_on_exception=: (untyped val) -> untyped
+  def self.default_formats=: (untyped val) -> untyped
+  def default_formats=: (untyped val) -> untyped
+  def self.automatically_disable_submit_tag=: (untyped val) -> untyped
+  def automatically_disable_submit_tag=: (untyped val) -> untyped
+  def self.annotate_rendered_view_with_filenames=: (untyped val) -> untyped
+  def annotate_rendered_view_with_filenames=: (untyped val) -> untyped
+  def self.default_form_builder=: (untyped val) -> untyped
+  # defined by `delegate` to: untyped#lookup_context
+  def formats: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#lookup_context
+  def formats=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#lookup_context
+  def locale: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#lookup_context
+  def locale=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#lookup_context
+  def view_paths: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#lookup_context
+  def view_paths=: (*untyped, **untyped) -> untyped
+  def self.prefix_partial_path_with_controller_namespace: () -> untyped
+  def self.prefix_partial_path_with_controller_namespace?: () -> bool
+  def self.prefix_partial_path_with_controller_namespace=: (untyped value) -> untyped
+  def prefix_partial_path_with_controller_namespace: () -> untyped
+  def prefix_partial_path_with_controller_namespace?: () -> bool
+  def prefix_partial_path_with_controller_namespace=: (untyped value) -> untyped
+  def self.logger: () -> untyped
+  def self.logger?: () -> bool
+  def self.logger=: (untyped value) -> untyped
+  def logger: () -> untyped
+  def logger?: () -> bool
+  def logger=: (untyped value) -> untyped
+  def self.assets_environment: () -> untyped
+  def self.assets_environment?: () -> bool
+  def self.assets_environment=: (untyped value) -> untyped
+  def assets_environment: () -> untyped
+  def assets_environment?: () -> bool
+  def assets_environment=: (untyped value) -> untyped
+  def self.assets_manifest: () -> untyped
+  def self.assets_manifest?: () -> bool
+  def self.assets_manifest=: (untyped value) -> untyped
+  def assets_manifest: () -> untyped
+  def assets_manifest?: () -> bool
+  def assets_manifest=: (untyped value) -> untyped
+  def self.assets_precompile: () -> untyped
+  def self.assets_precompile?: () -> bool
+  def self.assets_precompile=: (untyped value) -> untyped
+  def assets_precompile: () -> untyped
+  def assets_precompile?: () -> bool
+  def assets_precompile=: (untyped value) -> untyped
+  def self.precompiled_asset_checker: () -> untyped
+  def self.precompiled_asset_checker?: () -> bool
+  def self.precompiled_asset_checker=: (untyped value) -> untyped
+  def precompiled_asset_checker: () -> untyped
+  def precompiled_asset_checker?: () -> bool
+  def precompiled_asset_checker=: (untyped value) -> untyped
+  def self.assets_prefix: () -> untyped
+  def self.assets_prefix?: () -> bool
+  def self.assets_prefix=: (untyped value) -> untyped
+  def assets_prefix: () -> untyped
+  def assets_prefix?: () -> bool
+  def assets_prefix=: (untyped value) -> untyped
+  def self.digest_assets: () -> untyped
+  def self.digest_assets?: () -> bool
+  def self.digest_assets=: (untyped value) -> untyped
+  def digest_assets: () -> untyped
+  def digest_assets?: () -> bool
+  def digest_assets=: (untyped value) -> untyped
+  def self.debug_assets: () -> untyped
+  def self.debug_assets?: () -> bool
+  def self.debug_assets=: (untyped value) -> untyped
+  def debug_assets: () -> untyped
+  def debug_assets?: () -> bool
+  def debug_assets=: (untyped value) -> untyped
+  def self.resolve_assets_with: () -> untyped
+  def self.resolve_assets_with?: () -> bool
+  def self.resolve_assets_with=: (untyped value) -> untyped
+  def resolve_assets_with: () -> untyped
+  def resolve_assets_with?: () -> bool
+  def resolve_assets_with=: (untyped value) -> untyped
+  def self.check_precompiled_asset: () -> untyped
+  def self.check_precompiled_asset?: () -> bool
+  def self.check_precompiled_asset=: (untyped value) -> untyped
+  def check_precompiled_asset: () -> untyped
+  def check_precompiled_asset?: () -> bool
+  def check_precompiled_asset=: (untyped value) -> untyped
+  def self.unknown_asset_fallback: () -> untyped
+  def self.unknown_asset_fallback?: () -> bool
+  def self.unknown_asset_fallback=: (untyped value) -> untyped
+  def unknown_asset_fallback: () -> untyped
+  def unknown_asset_fallback?: () -> bool
+  def unknown_asset_fallback=: (untyped value) -> untyped
+  include ActionView::Helpers
+  include ERB::Util
+  include ActionView::Context
+  include ActionView::Helpers::FormHelper
+  include ActionView::Helpers::FormTagHelper
+  include ActionView::Helpers::UrlHelper
+  extend ActionView::Helpers::UrlHelper::ClassMethods
+  include ActionView::Helpers::TextHelper
+  include ActionView::Helpers::SanitizeHelper
+  extend ActionView::Helpers::SanitizeHelper::ClassMethods
+  include ActionView::Helpers::TranslationHelper
+  include Kaminari::Helpers::HelperMethods
+  include SimpleForm::ActionViewExtensions::FormHelper
+  include OcticonsHelper
+  include Sprockets::Rails::Helper
+end
+
+module ActionView::CollectionCaching
+  extend ActiveSupport::Concern
+end
+
+module ActionView::Context
+end
+
+module ActionView::Helpers
+end
+
+module ActionView::Helpers::FormHelper
+end
+
+module ActionView::Helpers::FormTagHelper
+end
+
+module ActionView::Helpers::SanitizeHelper
+end
+
+module ActionView::Helpers::SanitizeHelper::ClassMethods
+end
+
+module ActionView::Helpers::TextHelper
+end
+
+module ActionView::Helpers::TranslationHelper
+end
+
+module ActionView::Helpers::UrlHelper
+end
+
+module ActionView::Helpers::UrlHelper::ClassMethods
+end
+
+module ActionView::Layouts
+  extend ActiveSupport::Concern
+
+  include ActionView::Rendering
+end
+
+module ActionView::Layouts::ClassMethods
+end
+
+class ActionView::LogSubscriber < ::ActiveSupport::LogSubscriber
+  include ActionView::LogSubscriber::Utils
+  prepend Kaminari::ActionViewExtension::LogSubscriberSilencer
+end
+
+class ActionView::LogSubscriber::Start
+  include ActionView::LogSubscriber::Utils
+end
+
+module ActionView::LogSubscriber::Utils
+end
+
+class ActionView::LookupContext
+  include ActionView::LookupContext::Accessors
+  include ActionView::LookupContext::DetailsCache
+  include ActionView::LookupContext::ViewPaths
+end
+
+module ActionView::LookupContext::Accessors
+end
+
+module ActionView::LookupContext::DetailsCache
+end
+
+module ActionView::LookupContext::ViewPaths
+end
+
+class ActionView::PartialRenderer < ::ActionView::AbstractRenderer
+  def self.collection_cache: () -> untyped
+  def collection_cache: () -> untyped
+  def self.collection_cache=: (untyped val) -> untyped
+  def collection_cache=: (untyped val) -> untyped
+  include ActionView::CollectionCaching
+end
+
+module ActionView::Rendering
+  extend ActiveSupport::Concern
+
+  include ActionView::ViewPaths
+end
+
+module ActionView::Rendering::ClassMethods
+end
+
+class ActionView::Resolver
+  def caching: () -> untyped
+  def self.caching=: (untyped val) -> untyped
+  def caching=: (untyped val) -> untyped
+end
+
+module ActionView::RoutingUrlFor
+  def self.default_url_options=: (untyped val) -> untyped
+
+  def default_url_options=: (untyped val) -> untyped
+
+  include ActionDispatch::Routing::UrlFor
+end
+
+class ActionView::Template::Handlers::Rabl
+  def self.default_format: () -> untyped
+  def self.default_format?: () -> bool
+  def self.default_format=: (untyped value) -> untyped
+  def default_format: () -> untyped
+  def default_format?: () -> bool
+  def default_format=: (untyped value) -> untyped
+end
+
+module ActionView::ViewPaths
+  # defined by `delegate` to: untyped#lookup_context
+  def template_exists?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#lookup_context
+  def any_templates?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#lookup_context
+  def view_paths: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#lookup_context
+  def formats: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#lookup_context
+  def formats=: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#lookup_context
+  def locale: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#lookup_context
+  def locale=: (*untyped, **untyped) -> untyped
+
+  extend ActiveSupport::Concern
+end
+
+module ActionView::ViewPaths::ClassMethods
+end

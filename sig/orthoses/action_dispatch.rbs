@@ -1,0 +1,226 @@
+class ActionDispatch::ActionableExceptions
+  def self.endpoint: () -> untyped
+  def endpoint: () -> untyped
+  def self.endpoint=: (untyped val) -> untyped
+  def endpoint=: (untyped val) -> untyped
+end
+
+class ActionDispatch::Callbacks
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+end
+
+module ActionDispatch::ContentSecurityPolicy::Request
+end
+
+class ActionDispatch::Cookies::AbstractCookieJar
+  include ActionDispatch::Cookies::ChainedCookieJars
+end
+
+module ActionDispatch::Cookies::ChainedCookieJars
+end
+
+class ActionDispatch::Cookies::CookieJar
+  def self.always_write_cookie: () -> untyped
+  def always_write_cookie: () -> untyped
+  def self.always_write_cookie=: (untyped val) -> untyped
+  def always_write_cookie=: (untyped val) -> untyped
+  include Enumerable[untyped]
+  include ActionDispatch::Cookies::ChainedCookieJars
+end
+
+class ActionDispatch::Cookies::EncryptedKeyRotatingCookieJar < ::ActionDispatch::Cookies::AbstractCookieJar
+  include ActionDispatch::Cookies::SerializedCookieJars
+end
+
+module ActionDispatch::Cookies::SerializedCookieJars
+end
+
+class ActionDispatch::Cookies::SignedKeyRotatingCookieJar < ::ActionDispatch::Cookies::AbstractCookieJar
+  include ActionDispatch::Cookies::SerializedCookieJars
+end
+
+class ActionDispatch::DebugExceptions
+  def self.interceptors: () -> untyped
+end
+
+class ActionDispatch::ExceptionWrapper
+  def self.rescue_responses: () -> untyped
+  def rescue_responses: () -> untyped
+  def self.rescue_templates: () -> untyped
+  def rescue_templates: () -> untyped
+  def self.wrapper_exceptions: () -> untyped
+  def wrapper_exceptions: () -> untyped
+  def self.silent_exceptions: () -> untyped
+  def silent_exceptions: () -> untyped
+  def self.rescue_responses=: (untyped val) -> untyped
+  def rescue_responses=: (untyped val) -> untyped
+  def self.rescue_templates=: (untyped val) -> untyped
+  def rescue_templates=: (untyped val) -> untyped
+  def self.wrapper_exceptions=: (untyped val) -> untyped
+  def wrapper_exceptions=: (untyped val) -> untyped
+  def self.silent_exceptions=: (untyped val) -> untyped
+  def silent_exceptions=: (untyped val) -> untyped
+end
+
+class ActionDispatch::Flash::FlashHash
+  include Enumerable[untyped]
+end
+
+module ActionDispatch::Flash::RequestMethods
+end
+
+module ActionDispatch::Http::Cache::Request
+end
+
+module ActionDispatch::Http::FilterParameters
+end
+
+class ActionDispatch::Http::Headers
+  include Enumerable[untyped]
+end
+
+module ActionDispatch::Http::MimeNegotiation
+  extend ActiveSupport::Concern
+end
+
+module ActionDispatch::Http::Parameters
+  extend ActiveSupport::Concern
+end
+
+module ActionDispatch::Http::Parameters::ClassMethods
+end
+
+module ActionDispatch::Http::URL
+  def self.secure_protocol: () -> untyped
+
+  def secure_protocol: () -> untyped
+
+  def self.tld_length: () -> untyped
+
+  def tld_length: () -> untyped
+
+  def self.secure_protocol=: (untyped val) -> untyped
+
+  def secure_protocol=: (untyped val) -> untyped
+
+  def self.tld_length=: (untyped val) -> untyped
+
+  def tld_length=: (untyped val) -> untyped
+end
+
+class ActionDispatch::MiddlewareStack
+  include Enumerable[untyped]
+end
+
+module ActionDispatch::PermissionsPolicy
+end
+
+module ActionDispatch::PermissionsPolicy::Request
+end
+
+class ActionDispatch::Request
+  def self.ignore_accept_header: () -> untyped
+  def ignore_accept_header: () -> untyped
+  def self.ignore_accept_header=: (untyped val) -> untyped
+  def ignore_accept_header=: (untyped val) -> untyped
+  include Rack::Request::Helpers
+  include ActionDispatch::Http::Cache::Request
+  include ActionDispatch::Http::MimeNegotiation
+  include ActionDispatch::Http::Parameters
+  extend ActionDispatch::Http::Parameters::ClassMethods
+  include ActionDispatch::Http::FilterParameters
+  include ActionDispatch::Http::URL
+  include ActionDispatch::ContentSecurityPolicy::Request
+  include ActionDispatch::PermissionsPolicy::Request
+  include Rack::Request::Env
+  include ActionDispatch::RequestCookieMethods
+  prepend ActionDispatch::Flash::RequestMethods
+end
+
+class ActionDispatch::Request::Utils
+  def self.perform_deep_munge: () -> untyped
+  def perform_deep_munge: () -> untyped
+  def self.perform_deep_munge=: (untyped val) -> untyped
+  def perform_deep_munge=: (untyped val) -> untyped
+end
+
+module ActionDispatch::RequestCookieMethods
+end
+
+class ActionDispatch::Routing::Mapper
+  def self.route_source_locations: () -> untyped
+  def self.backtrace_cleaner: () -> untyped
+  def self.route_source_locations=: (untyped val) -> untyped
+  def self.backtrace_cleaner=: (untyped val) -> untyped
+  include ActionDispatch::Routing::Mapper::Base
+  include ActionDispatch::Routing::Mapper::HttpHelpers
+  include ActionDispatch::Routing::Redirection
+  include ActionDispatch::Routing::Mapper::Scoping
+  include ActionDispatch::Routing::Mapper::Concerns
+  include ActionDispatch::Routing::Mapper::Resources
+  include ActionDispatch::Routing::Mapper::CustomUrls
+end
+
+module ActionDispatch::Routing::Mapper::Base
+end
+
+module ActionDispatch::Routing::Mapper::Concerns
+end
+
+module ActionDispatch::Routing::Mapper::CustomUrls
+end
+
+module ActionDispatch::Routing::Mapper::HttpHelpers
+end
+
+module ActionDispatch::Routing::Mapper::Resources
+end
+
+class ActionDispatch::Routing::Mapper::Scope
+  include Enumerable[untyped]
+end
+
+module ActionDispatch::Routing::Mapper::Scoping
+end
+
+module ActionDispatch::Routing::Redirection
+end
+
+module ActionDispatch::Routing::RouteSet::MountedHelpers
+end
+
+class ActionDispatch::Routing::RouteWrapper < ::SimpleDelegator
+  def self.assets_prefix: () -> untyped
+  def self.assets_prefix?: () -> bool
+  def self.assets_prefix=: (untyped value) -> untyped
+  def assets_prefix: () -> untyped
+  def assets_prefix?: () -> bool
+  def assets_prefix=: (untyped value) -> untyped
+  prepend Sprockets::Rails::RouteWrapper
+end
+
+module ActionDispatch::Routing::UrlFor
+end
+
+class ActionDispatch::Session::AbstractSecureStore < ::Rack::Session::Abstract::PersistedSecure
+  include ActionDispatch::Session::Compatibility
+  include ActionDispatch::Session::StaleSessionCheck
+  include ActionDispatch::Session::SessionObject
+end
+
+class ActionDispatch::Session::AbstractStore < ::Rack::Session::Abstract::Persisted
+  include ActionDispatch::Session::Compatibility
+  include ActionDispatch::Session::StaleSessionCheck
+  include ActionDispatch::Session::SessionObject
+end
+
+module ActionDispatch::Session::Compatibility
+end
+
+module ActionDispatch::Session::SessionObject
+end
+
+module ActionDispatch::Session::StaleSessionCheck
+end

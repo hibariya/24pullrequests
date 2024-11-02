@@ -1,0 +1,118 @@
+module RSpec
+end
+
+module RSpec::Mocks
+end
+
+module RSpec::Mocks::ArgumentMatchers
+end
+
+class RSpec::Mocks::ClassVerifyingDouble < ::Module
+  include RSpec::Mocks::ObjectVerifyingDoubleMethods
+end
+
+class RSpec::Mocks::Constant
+  extend RSpec::Support::RecursiveConstMethods
+end
+
+class RSpec::Mocks::ConstantMutator
+  extend RSpec::Support::RecursiveConstMethods
+end
+
+class RSpec::Mocks::ConstantMutator::BaseMutator
+  include RSpec::Support::RecursiveConstMethods
+end
+
+class RSpec::Mocks::Double
+  include RSpec::Mocks::TestDouble
+end
+
+module RSpec::Mocks::ExampleMethods
+  include RSpec::Mocks::ArgumentMatchers
+end
+
+class RSpec::Mocks::ExpectationTarget < ::RSpec::Mocks::TargetBase
+  include RSpec::Mocks::ExpectationTargetMethods
+end
+
+module RSpec::Mocks::ExpectationTargetMethods
+  extend RSpec::Mocks::TargetDelegationClassMethods
+
+  include RSpec::Mocks::TargetDelegationInstanceMethods
+end
+
+class RSpec::Mocks::InstanceVerifyingDouble
+  include RSpec::Mocks::TestDouble
+  include RSpec::Mocks::VerifyingDouble
+end
+
+class RSpec::Mocks::MessageExpectation
+  include RSpec::Mocks::MessageExpectation::ImplementationDetails
+end
+
+module RSpec::Mocks::MessageExpectation::ImplementationDetails
+end
+
+class RSpec::Mocks::ObjectVerifyingDouble
+  include RSpec::Mocks::ObjectVerifyingDoubleMethods
+end
+
+module RSpec::Mocks::ObjectVerifyingDoubleMethods
+  include RSpec::Mocks::TestDouble
+
+  include RSpec::Mocks::VerifyingDouble
+end
+
+class RSpec::Mocks::PartialClassDoubleProxy < ::RSpec::Mocks::PartialDoubleProxy
+  include RSpec::Mocks::PartialClassDoubleProxyMethods
+end
+
+module RSpec::Mocks::PartialClassDoubleProxyMethods
+end
+
+class RSpec::Mocks::PartialDoubleProxy < ::RSpec::Mocks::Proxy
+end
+
+class RSpec::Mocks::Proxy
+end
+
+class RSpec::Mocks::TargetBase
+  extend RSpec::Mocks::TargetDelegationClassMethods
+  include RSpec::Mocks::TargetDelegationInstanceMethods
+end
+
+module RSpec::Mocks::TargetDelegationClassMethods
+end
+
+module RSpec::Mocks::TargetDelegationInstanceMethods
+end
+
+module RSpec::Mocks::TestDouble
+end
+
+class RSpec::Mocks::TestDoubleProxy < ::RSpec::Mocks::Proxy
+end
+
+module RSpec::Mocks::VerifyingDouble
+end
+
+class RSpec::Mocks::VerifyingPartialClassDoubleProxy < ::RSpec::Mocks::VerifyingPartialDoubleProxy
+  include RSpec::Mocks::PartialClassDoubleProxyMethods
+end
+
+class RSpec::Mocks::VerifyingPartialDoubleProxy < ::RSpec::Mocks::PartialDoubleProxy
+  include RSpec::Mocks::VerifyingProxyMethods
+end
+
+class RSpec::Mocks::VerifyingProxy < ::RSpec::Mocks::TestDoubleProxy
+  include RSpec::Mocks::VerifyingProxyMethods
+end
+
+module RSpec::Mocks::VerifyingProxyMethods
+end
+
+module RSpec::Support
+end
+
+module RSpec::Support::RecursiveConstMethods
+end

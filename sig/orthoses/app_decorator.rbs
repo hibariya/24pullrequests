@@ -1,0 +1,2 @@
+class AppDecorator < ::Draper::Decorator
+end

@@ -1,0 +1,16 @@
+class Mime::AllType < ::Mime::Type
+  include Singleton
+  extend Singleton::SingletonClassMethods
+end
+
+class Mime::Mimes
+  include Enumerable[untyped]
+end
+
+class Mime::NullType
+  include Singleton
+  extend Singleton::SingletonClassMethods
+end
+
+class Mime::Type
+end

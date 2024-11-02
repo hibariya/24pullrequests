@@ -1,0 +1,13 @@
+class ApplicationController < ::ActionController::Base
+  include ActionDispatch::Routing::UrlFor
+end
+
+module ApplicationController::HelperMethods
+  include ActionController::Base::HelperMethods
+
+  include ApplicationHelper
+
+  include CountHelper
+
+  include ProjectHelper
+end

@@ -1,0 +1,15 @@
+module Hashie::Extensions
+end
+
+module Hashie::Extensions::ActiveSupport
+end
+
+module Hashie::Extensions::ActiveSupport::CoreExt
+end
+
+module Hashie::Extensions::ActiveSupport::CoreExt::Hash
+end
+
+class Hashie::Mash < ::Hash[untyped, untyped]
+  include Hashie::Extensions::ActiveSupport::CoreExt::Hash
+end

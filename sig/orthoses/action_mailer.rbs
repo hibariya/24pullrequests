@@ -1,0 +1,251 @@
+class ActionMailer::Base < ::AbstractController::Base
+  def self.raise_delivery_errors: () -> untyped
+  def raise_delivery_errors: () -> untyped
+  def self.perform_deliveries: () -> untyped
+  def perform_deliveries: () -> untyped
+  def self.preview_paths: () -> untyped
+  def preview_paths: () -> untyped
+  def self.show_previews: () -> untyped
+  def show_previews: () -> untyped
+  def self.preview_interceptors: () -> untyped
+  def preview_interceptors: () -> untyped
+  def self.raise_on_missing_callback_actions: () -> untyped
+  def raise_on_missing_callback_actions: () -> untyped
+  def self.raise_delivery_errors=: (untyped val) -> untyped
+  def raise_delivery_errors=: (untyped val) -> untyped
+  def self.perform_deliveries=: (untyped val) -> untyped
+  def perform_deliveries=: (untyped val) -> untyped
+  def self.preview_paths=: (untyped val) -> untyped
+  def self.show_previews=: (untyped val) -> untyped
+  def self.preview_interceptors=: (untyped val) -> untyped
+  def self.raise_on_missing_callback_actions=: (untyped val) -> untyped
+  def raise_on_missing_callback_actions=: (untyped val) -> untyped
+  def self.logger: () -> untyped
+  def self.logger=: (untyped value) -> untyped
+  def logger: () -> untyped
+  def logger=: (untyped value) -> untyped
+  def self.asset_host: () -> untyped
+  def self.asset_host=: (untyped value) -> untyped
+  def asset_host: () -> untyped
+  def asset_host=: (untyped value) -> untyped
+  def self.assets_dir: () -> untyped
+  def self.assets_dir=: (untyped value) -> untyped
+  def assets_dir: () -> untyped
+  def assets_dir=: (untyped value) -> untyped
+  def self.javascripts_dir: () -> untyped
+  def self.javascripts_dir=: (untyped value) -> untyped
+  def javascripts_dir: () -> untyped
+  def javascripts_dir=: (untyped value) -> untyped
+  def self.stylesheets_dir: () -> untyped
+  def self.stylesheets_dir=: (untyped value) -> untyped
+  def stylesheets_dir: () -> untyped
+  def stylesheets_dir=: (untyped value) -> untyped
+  def self.default_asset_host_protocol: () -> untyped
+  def self.default_asset_host_protocol=: (untyped value) -> untyped
+  def default_asset_host_protocol: () -> untyped
+  def default_asset_host_protocol=: (untyped value) -> untyped
+  def self.relative_url_root: () -> untyped
+  def self.relative_url_root=: (untyped value) -> untyped
+  def relative_url_root: () -> untyped
+  def relative_url_root=: (untyped value) -> untyped
+  def self.default_static_extension: () -> untyped
+  def self.default_static_extension=: (untyped value) -> untyped
+  def default_static_extension: () -> untyped
+  def default_static_extension=: (untyped value) -> untyped
+  def self.perform_caching: () -> untyped
+  def self.perform_caching=: (untyped value) -> untyped
+  def perform_caching: () -> untyped
+  def perform_caching=: (untyped value) -> untyped
+  def self.enable_fragment_cache_logging: () -> untyped
+  def self.enable_fragment_cache_logging=: (untyped value) -> untyped
+  def enable_fragment_cache_logging: () -> untyped
+  def enable_fragment_cache_logging=: (untyped value) -> untyped
+  def self.delivery_methods: () -> untyped
+  def self.delivery_methods?: () -> bool
+  def self.delivery_methods=: (untyped value) -> untyped
+  def delivery_methods: () -> untyped
+  def delivery_methods?: () -> bool
+  def delivery_methods=: (untyped value) -> untyped
+  def self.delivery_method: () -> untyped
+  def self.delivery_method?: () -> bool
+  def self.delivery_method=: (untyped value) -> untyped
+  def delivery_method: () -> untyped
+  def delivery_method?: () -> bool
+  def delivery_method=: (untyped value) -> untyped
+  def self.smtp_settings: () -> untyped
+  def self.smtp_settings?: () -> bool
+  def self.smtp_settings=: (untyped value) -> untyped
+  def smtp_settings: () -> untyped
+  def smtp_settings?: () -> bool
+  def smtp_settings=: (untyped value) -> untyped
+  def self.file_settings: () -> untyped
+  def self.file_settings?: () -> bool
+  def self.file_settings=: (untyped value) -> untyped
+  def file_settings: () -> untyped
+  def file_settings?: () -> bool
+  def file_settings=: (untyped value) -> untyped
+  def self.sendmail_settings: () -> untyped
+  def self.sendmail_settings?: () -> bool
+  def self.sendmail_settings=: (untyped value) -> untyped
+  def sendmail_settings: () -> untyped
+  def sendmail_settings?: () -> bool
+  def sendmail_settings=: (untyped value) -> untyped
+  def self.test_settings: () -> untyped
+  def self.test_settings?: () -> bool
+  def self.test_settings=: (untyped value) -> untyped
+  def test_settings: () -> untyped
+  def test_settings?: () -> bool
+  def test_settings=: (untyped value) -> untyped
+  def self.delivery_job: () -> untyped
+  def self.delivery_job?: () -> bool
+  def self.delivery_job=: (untyped value) -> untyped
+  def delivery_job: () -> untyped
+  def delivery_job?: () -> bool
+  def delivery_job=: (untyped value) -> untyped
+  def self.deliver_later_queue_name: () -> untyped
+  def self.deliver_later_queue_name?: () -> bool
+  def self.deliver_later_queue_name=: (untyped value) -> untyped
+  def deliver_later_queue_name: () -> untyped
+  def deliver_later_queue_name?: () -> bool
+  def deliver_later_queue_name=: (untyped value) -> untyped
+  def self.rescue_handlers: () -> untyped
+  def self.rescue_handlers?: () -> bool
+  def self.rescue_handlers=: (untyped value) -> untyped
+  def rescue_handlers: () -> untyped
+  def rescue_handlers?: () -> bool
+  def rescue_handlers=: (untyped value) -> untyped
+  def self.fragment_cache_keys: () -> untyped
+  def self.fragment_cache_keys?: () -> bool
+  def self.fragment_cache_keys=: (untyped value) -> untyped
+  def fragment_cache_keys: () -> untyped
+  def fragment_cache_keys?: () -> bool
+  def fragment_cache_keys=: (untyped value) -> untyped
+  def self.default_params: () -> untyped
+  def self.default_params?: () -> bool
+  def self.default_params=: (untyped value) -> untyped
+  def default_params: () -> untyped
+  def default_params?: () -> bool
+  def default_params=: (untyped value) -> untyped
+  def self.default_url_options: () -> untyped
+  def self.default_url_options?: () -> bool
+  def self.default_url_options=: (untyped value) -> untyped
+  def default_url_options: () -> untyped
+  def default_url_options?: () -> bool
+  def default_url_options=: (untyped value) -> untyped
+  include ActionMailer::Callbacks
+  extend ActionMailer::Callbacks::ClassMethods
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+  include ActionMailer::DeliveryMethods
+  extend ActionMailer::DeliveryMethods::ClassMethods
+  include ActionMailer::QueuedDelivery
+  include ActionMailer::Rescuable
+  include ActiveSupport::Rescuable
+  extend ActiveSupport::Rescuable::ClassMethods
+  extend ActionMailer::Rescuable::ClassMethods
+  include ActionMailer::Parameterized
+  extend ActionMailer::Parameterized::ClassMethods
+  include ActionMailer::Previews
+  extend ActionMailer::Previews::ClassMethods
+  include ActionMailer::FormBuilder
+  extend ActionMailer::FormBuilder::ClassMethods
+  include AbstractController::Rendering
+  include ActionView::ViewPaths
+  extend ActionView::ViewPaths::ClassMethods
+  include AbstractController::Logger
+  include ActiveSupport::Benchmarkable
+  include AbstractController::Helpers
+  extend AbstractController::Helpers::ClassMethods
+  include AbstractController::Translation
+  include AbstractController::AssetPaths
+  include AbstractController::Callbacks
+  extend AbstractController::Callbacks::ClassMethods
+  include AbstractController::Caching
+  include AbstractController::Caching::Fragments
+  extend AbstractController::Caching::Fragments::ClassMethods
+  extend AbstractController::Caching::ClassMethods
+  extend AbstractController::Caching::ConfigMethods
+  include ActionView::Layouts
+  include ActionView::Rendering
+  extend ActionView::Rendering::ClassMethods
+  extend ActionView::Layouts::ClassMethods
+  include AbstractController::UrlFor
+  include ActionDispatch::Routing::UrlFor
+  extend AbstractController::UrlFor::ClassMethods
+  include ActionDispatch::Routing::RouteSet::MountedHelpers
+  include Draper::ViewContext
+end
+
+module ActionMailer::Base::HelperMethods
+  include ActionMailer::MailHelper
+end
+
+module ActionMailer::Callbacks
+  extend ActiveSupport::Concern
+end
+
+module ActionMailer::Callbacks::ClassMethods
+end
+
+class ActionMailer::Collector
+  include AbstractController::Collector
+end
+
+module ActionMailer::DeliveryMethods
+  extend ActiveSupport::Concern
+end
+
+module ActionMailer::DeliveryMethods::ClassMethods
+  # defined by `delegate` to: Mail::TestMailer
+  def deliveries: () -> untyped
+
+  # defined by `delegate` to: Mail::TestMailer
+  def deliveries=: (untyped val) -> untyped
+end
+
+module ActionMailer::FormBuilder
+  extend ActiveSupport::Concern
+end
+
+module ActionMailer::FormBuilder::ClassMethods
+end
+
+class ActionMailer::InlinePreviewInterceptor
+  include Base64
+end
+
+module ActionMailer::MailHelper
+end
+
+module ActionMailer::Parameterized
+  extend ActiveSupport::Concern
+end
+
+module ActionMailer::Parameterized::ClassMethods
+end
+
+class ActionMailer::Preview
+  extend ActiveSupport::DescendantsTracker
+end
+
+module ActionMailer::Previews
+  extend ActiveSupport::Concern
+end
+
+module ActionMailer::Previews::ClassMethods
+end
+
+module ActionMailer::QueuedDelivery
+  extend ActiveSupport::Concern
+end
+
+module ActionMailer::Rescuable
+  extend ActiveSupport::Concern
+
+  include ActiveSupport::Rescuable
+end
+
+module ActionMailer::Rescuable::ClassMethods
+  def handle_exception: (untyped exception) -> untyped
+end

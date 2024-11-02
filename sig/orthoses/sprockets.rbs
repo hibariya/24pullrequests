@@ -1,0 +1,11 @@
+module Sprockets
+end
+
+module Sprockets::Rails
+end
+
+module Sprockets::Rails::Helper
+end
+
+module Sprockets::Rails::RouteWrapper
+end

@@ -54,6 +54,10 @@ group :development, :test, :cucumber do
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
+
+  gem "orthoses", git: "https://github.com/ksss/orthoses.git"
+  gem "orthoses-rails"
+  gem "steep"
 end
 
 group :production do

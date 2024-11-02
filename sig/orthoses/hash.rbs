@@ -1,0 +1,2 @@
+class Hash[unchecked out K, unchecked out V]
+end

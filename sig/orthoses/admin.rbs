@@ -1,0 +1,8 @@
+module Admin
+end
+
+class Admin::DasherController < ::ApplicationController
+end
+
+class Admin::ProjectsController < ::ApplicationController
+end

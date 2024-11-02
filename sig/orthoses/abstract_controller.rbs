@@ -1,0 +1,83 @@
+class AbstractController::ActionNotFound < ::StandardError
+  include DidYouMean::Correctable
+end
+
+module AbstractController::AssetPaths
+  extend ActiveSupport::Concern
+end
+
+class AbstractController::Base
+  include ActiveSupport::Configurable
+  extend ActiveSupport::Configurable::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+end
+
+module AbstractController::Caching
+  extend ActiveSupport::Concern
+
+  extend ActiveSupport::Autoload
+
+  include AbstractController::Caching::ConfigMethods
+
+  include AbstractController::Caching::Fragments
+end
+
+module AbstractController::Caching::ClassMethods
+end
+
+module AbstractController::Caching::ConfigMethods
+end
+
+module AbstractController::Caching::Fragments
+  extend ActiveSupport::Concern
+end
+
+module AbstractController::Caching::Fragments::ClassMethods
+end
+
+module AbstractController::Callbacks
+  extend ActiveSupport::Concern
+
+  include ActiveSupport::Callbacks
+end
+
+module AbstractController::Callbacks::ClassMethods
+end
+
+module AbstractController::Collector
+end
+
+module AbstractController::Helpers
+  extend ActiveSupport::Concern
+
+  extend AbstractController::Helpers::Resolution
+end
+
+module AbstractController::Helpers::ClassMethods
+  include AbstractController::Helpers::Resolution
+end
+
+module AbstractController::Helpers::Resolution
+end
+
+module AbstractController::Logger
+  extend ActiveSupport::Concern
+end
+
+module AbstractController::Rendering
+  extend ActiveSupport::Concern
+
+  include ActionView::ViewPaths
+end
+
+module AbstractController::Translation
+end
+
+module AbstractController::UrlFor
+  extend ActiveSupport::Concern
+
+  include ActionDispatch::Routing::UrlFor
+end
+
+module AbstractController::UrlFor::ClassMethods
+end

@@ -1,0 +1,1930 @@
+module ActiveRecord::Aggregations::ClassMethods
+end
+
+class ActiveRecord::AssociationRelation < ::ActiveRecord::Relation
+end
+
+module ActiveRecord::Associations
+  extend ActiveSupport::Autoload
+
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Associations::ClassMethods
+end
+
+class ActiveRecord::Associations::CollectionProxy < ::ActiveRecord::Relation
+  # defined by `delegate` to: untyped#scope
+  def left_outer_joins: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def with_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reverse_order_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reverse_order_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def extract_associated: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def annotate: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def unscope: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def rewhere: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def with_recursive: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def preload: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def invert_where: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def joins: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def where: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def limit: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def readonly: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def group: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def where!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def lock: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def lock!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def strict_loading!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def readonly!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def excluding: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def in_order_of: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def references: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def where_clause: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def optimizer_hints: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reverse_order: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def lock_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def and: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def or: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def distinct_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def _select!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def select_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def group_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def includes: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def create_with_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def eager_load_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def create_with: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def includes_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def joins_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def strict_loading_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def preload_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def eager_load: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def readonly_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def null_relation?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def skip_query_cache_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def references_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def strict_loading: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reverse_order!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def limit!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def construct_join_dependency: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def joins!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def and!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def or!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def left_outer_joins_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def distinct!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def order_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def from: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def arel: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def offset_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def limit_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def preload!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def group_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def extending: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def uniq!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def none: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def limit_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def offset_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def preload_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def includes_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def includes!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def joins_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def left_outer_joins_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def left_outer_joins!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reordering_value: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reorder!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def extending!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def lock_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def create_with_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def from_clause: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def from_clause=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def where_clause=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def having_clause=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def without: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def extending_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def eager_load_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def references!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def order_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def references_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def with!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def with_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def with_recursive!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reselect!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def group!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def regroup!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reordering_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def with: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def unscope!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def unscope_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def unscope_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def invert_where!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def structurally_compatible?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def having!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def having: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def having_clause: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def offset!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def readonly_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def strict_loading_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def create_with!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def from!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def distinct_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def extending_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def optimizer_hints!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def optimizer_hints_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def optimizer_hints_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def offset: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def skip_query_cache!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def skip_query_cache_value=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def skip_preloading!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def annotate!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def annotate_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def annotate_values=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def excluding!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def distinct: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def select_values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def none!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def eager_load!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def extensions: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def order: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def order!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def regroup: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reorder: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def reselect: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def left_joins: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def merge!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def merge: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def only: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def except: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def spawn: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def scoping: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def values: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def insert: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def insert_all: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def insert!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def insert_all!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def upsert: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def upsert_all: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#scope
+  def load_async: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::AttributeAssignment
+end
+
+module ActiveRecord::AttributeMethods
+end
+
+module ActiveRecord::AttributeMethods::BeforeTypeCast
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::ClassMethods
+end
+
+module ActiveRecord::AttributeMethods::Dirty
+  extend ActiveSupport::Concern
+
+  include ActiveModel::Dirty
+end
+
+module ActiveRecord::AttributeMethods::PrimaryKey
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
+end
+
+module ActiveRecord::AttributeMethods::Query
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::Read
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::Read::ClassMethods
+end
+
+module ActiveRecord::AttributeMethods::Serialization
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::Serialization::ClassMethods
+end
+
+module ActiveRecord::AttributeMethods::TimeZoneConversion
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
+end
+
+module ActiveRecord::AttributeMethods::Write
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AttributeMethods::Write::ClassMethods
+end
+
+module ActiveRecord::Attributes
+  extend ActiveSupport::Concern
+
+  include ActiveModel::AttributeRegistration
+end
+
+module ActiveRecord::Attributes::ClassMethods
+end
+
+module ActiveRecord::AutosaveAssociation
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::AutosaveAssociation::ClassMethods
+end
+
+class ActiveRecord::Base
+  def self.param_delimiter: () -> untyped
+  def self.param_delimiter?: () -> bool
+  def self.param_delimiter=: (untyped value) -> untyped
+  def param_delimiter=: (untyped value) -> untyped
+  def self.logger?: () -> bool
+  def logger?: () -> bool
+  def self.destroy_association_async_batch_size: () -> untyped
+  def self.destroy_association_async_batch_size=: (untyped value) -> untyped
+  def destroy_association_async_batch_size: () -> untyped
+  def self.enumerate_columns_in_select_statements: () -> untyped
+  def self.enumerate_columns_in_select_statements?: () -> bool
+  def self.enumerate_columns_in_select_statements=: (untyped value) -> untyped
+  def self.belongs_to_required_by_default?: () -> bool
+  def self.strict_loading_by_default: () -> untyped
+  def self.strict_loading_by_default?: () -> bool
+  def self.strict_loading_by_default=: (untyped value) -> untyped
+  def self.has_many_inversing: () -> untyped
+  def self.has_many_inversing?: () -> bool
+  def self.has_many_inversing=: (untyped value) -> untyped
+  def self.run_commit_callbacks_on_first_saved_instances_in_transaction: () -> untyped
+  def self.run_commit_callbacks_on_first_saved_instances_in_transaction?: () -> bool
+  def self.run_commit_callbacks_on_first_saved_instances_in_transaction=: (untyped value) -> untyped
+  def self.default_role: () -> untyped
+  def self.default_role?: () -> bool
+  def self.default_role=: (untyped value) -> untyped
+  def default_role: () -> untyped
+  def default_role?: () -> bool
+  def self.default_shard: () -> untyped
+  def self.default_shard?: () -> bool
+  def self.default_shard=: (untyped value) -> untyped
+  def default_shard: () -> untyped
+  def default_shard?: () -> bool
+  def self.shard_selector: () -> untyped
+  def self.shard_selector?: () -> bool
+  def self.shard_selector=: (untyped value) -> untyped
+  def self.attributes_for_inspect: () -> untyped
+  def self.attributes_for_inspect?: () -> bool
+  def self.attributes_for_inspect=: (untyped value) -> untyped
+  def self.primary_key_prefix_type?: () -> bool
+  def primary_key_prefix_type?: () -> bool
+  def self.immutable_strings_by_default: () -> untyped
+  def self.immutable_strings_by_default?: () -> bool
+  def self.immutable_strings_by_default=: (untyped value) -> untyped
+  def self.inheritance_column: () -> untyped
+  def self.inheritance_column?: () -> bool
+  def self.inheritance_column=: (untyped value) -> untyped
+  def self.store_full_class_name: () -> untyped
+  def self.store_full_class_name?: () -> bool
+  def self.store_full_class_name=: (untyped value) -> untyped
+  def store_full_class_name: () -> untyped
+  def store_full_class_name?: () -> bool
+  def self.counter_cached_association_names: () -> untyped
+  def self.counter_cached_association_names?: () -> bool
+  def self.counter_cached_association_names=: (untyped value) -> untyped
+  def counter_cached_association_names: () -> untyped
+  def counter_cached_association_names?: () -> bool
+  def self.encrypted_attributes: () -> untyped
+  def self.encrypted_attributes?: () -> bool
+  def self.encrypted_attributes=: (untyped value) -> untyped
+  def encrypted_attributes: () -> untyped
+  def encrypted_attributes?: () -> bool
+  def encrypted_attributes=: (untyped value) -> untyped
+  def self.attribute_method_patterns: () -> untyped
+  def self.attribute_method_patterns?: () -> bool
+  def self.attribute_method_patterns=: (untyped value) -> untyped
+  def attribute_method_patterns: () -> untyped
+  def attribute_method_patterns?: () -> bool
+  def self.time_zone_aware_attributes?: () -> bool
+  def time_zone_aware_attributes?: () -> bool
+  def self.partial_updates: () -> untyped
+  def self.partial_updates?: () -> bool
+  def self.partial_updates=: (untyped value) -> untyped
+  def partial_updates: () -> untyped
+  def partial_updates?: () -> bool
+  def self.partial_inserts: () -> untyped
+  def self.partial_inserts?: () -> bool
+  def self.partial_inserts=: (untyped value) -> untyped
+  def partial_inserts: () -> untyped
+  def partial_inserts?: () -> bool
+  def self.default_column_serializer: () -> untyped
+  def self.default_column_serializer?: () -> bool
+  def self.default_column_serializer=: (untyped value) -> untyped
+  def self.automatic_scope_inversing: () -> untyped
+  def self.automatic_scope_inversing?: () -> bool
+  def self.automatic_scope_inversing=: (untyped value) -> untyped
+  def automatic_scope_inversing: () -> untyped
+  def automatic_scope_inversing?: () -> bool
+  def self.automatically_invert_plural_associations: () -> untyped
+  def self.automatically_invert_plural_associations?: () -> bool
+  def self.automatically_invert_plural_associations=: (untyped value) -> untyped
+  def automatically_invert_plural_associations: () -> untyped
+  def automatically_invert_plural_associations?: () -> bool
+  def self.token_definitions: () -> untyped
+  def self.token_definitions=: (untyped value) -> untyped
+  def self.generated_token_verifier: () -> untyped
+  def self.generated_token_verifier=: (untyped value) -> untyped
+  def self.signed_id_verifier_secret: () -> untyped
+  def self.signed_id_verifier_secret?: () -> bool
+  def self.signed_id_verifier_secret=: (untyped value) -> untyped
+  def signed_id_verifier_secret: () -> untyped
+  def signed_id_verifier_secret?: () -> bool
+  def self.normalized_attributes: () -> untyped
+  def self.normalized_attributes?: () -> bool
+  def self.normalized_attributes=: (untyped value) -> untyped
+  def normalized_attributes: () -> untyped
+  def normalized_attributes?: () -> bool
+  def normalized_attributes=: (untyped value) -> untyped
+  include ActiveModel::API
+  include ActiveModel::Validations
+  extend ActiveModel::Validations::ClassMethods
+  extend ActiveModel::Naming
+  extend ActiveModel::Callbacks
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+  extend ActiveModel::Translation
+  extend ActiveModel::Validations::HelperMethods
+  include ActiveModel::Validations::HelperMethods
+  include ActiveModel::Conversion
+  extend ActiveModel::Conversion::ClassMethods
+  extend ActiveSupport::Benchmarkable
+  extend ActiveRecord::ConnectionHandling
+  extend ActiveRecord::QueryCache::ClassMethods
+  extend ActiveRecord::Querying
+  extend ActiveRecord::Translation
+  extend ActiveRecord::DynamicMatchers
+  extend ActiveRecord::DelegatedType
+  extend ActiveRecord::Explain
+  extend ActiveRecord::Enum
+  extend ActiveRecord::Delegation::DelegateCache
+  extend ActiveRecord::Aggregations::ClassMethods
+  include ActiveRecord::Core
+  extend ActiveRecord::Core::ClassMethods
+  include ActiveRecord::Persistence
+  extend ActiveRecord::Persistence::ClassMethods
+  include ActiveRecord::ReadonlyAttributes
+  extend ActiveRecord::ReadonlyAttributes::ClassMethods
+  include ActiveRecord::ModelSchema
+  extend ActiveRecord::ModelSchema::ClassMethods
+  include ActiveRecord::Inheritance
+  extend ActiveRecord::Inheritance::ClassMethods
+  include ActiveRecord::Scoping
+  extend ActiveRecord::Scoping::ClassMethods
+  include ActiveRecord::Scoping::Default
+  extend ActiveRecord::Scoping::Default::ClassMethods
+  include ActiveRecord::Scoping::Named
+  extend ActiveRecord::Scoping::Named::ClassMethods
+  include ActiveRecord::Sanitization
+  extend ActiveRecord::Sanitization::ClassMethods
+  include ActiveRecord::AttributeAssignment
+  include ActiveRecord::Integration
+  extend ActiveRecord::Integration::ClassMethods
+  include ActiveRecord::Validations
+  extend ActiveRecord::Validations::ClassMethods
+  include ActiveRecord::CounterCache
+  extend ActiveRecord::CounterCache::ClassMethods
+  include ActiveRecord::Attributes
+  include ActiveModel::AttributeRegistration
+  extend ActiveModel::AttributeRegistration::ClassMethods
+  extend ActiveRecord::Attributes::ClassMethods
+  include ActiveRecord::Locking::Optimistic
+  extend ActiveRecord::Locking::Optimistic::ClassMethods
+  include ActiveRecord::Locking::Pessimistic
+  include ActiveRecord::Encryption::EncryptableRecord
+  extend ActiveRecord::Encryption::EncryptableRecord::ClassMethods
+  include ActiveRecord::AttributeMethods
+  include ActiveModel::AttributeMethods
+  extend ActiveModel::AttributeMethods::ClassMethods
+  extend ActiveRecord::AttributeMethods::ClassMethods
+  include ActiveRecord::Base::GeneratedAttributeMethods
+  include ActiveRecord::Base::GeneratedAssociationMethods
+  include ActiveRecord::AttributeMethods::Read
+  extend ActiveRecord::AttributeMethods::Read::ClassMethods
+  include ActiveRecord::AttributeMethods::Write
+  extend ActiveRecord::AttributeMethods::Write::ClassMethods
+  include ActiveRecord::AttributeMethods::BeforeTypeCast
+  include ActiveRecord::AttributeMethods::Query
+  include ActiveRecord::AttributeMethods::PrimaryKey
+  extend ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
+  include ActiveRecord::AttributeMethods::TimeZoneConversion
+  extend ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
+  include ActiveRecord::AttributeMethods::Dirty
+  include ActiveModel::Dirty
+  include ActiveRecord::AttributeMethods::Serialization
+  extend ActiveRecord::AttributeMethods::Serialization::ClassMethods
+  include ActiveRecord::Callbacks
+  extend ActiveRecord::Callbacks::ClassMethods
+  include ActiveModel::Validations::Callbacks
+  extend ActiveModel::Validations::Callbacks::ClassMethods
+  include ActiveRecord::Timestamp
+  extend ActiveRecord::Timestamp::ClassMethods
+  include ActiveRecord::Associations
+  extend ActiveRecord::Associations::ClassMethods
+  include ActiveRecord::SecurePassword
+  include ActiveModel::SecurePassword
+  extend ActiveModel::SecurePassword::ClassMethods
+  extend ActiveRecord::SecurePassword::ClassMethods
+  include ActiveRecord::AutosaveAssociation
+  extend ActiveRecord::AutosaveAssociation::ClassMethods
+  include ActiveRecord::NestedAttributes
+  extend ActiveRecord::NestedAttributes::ClassMethods
+  include ActiveRecord::Transactions
+  extend ActiveRecord::Transactions::ClassMethods
+  include ActiveRecord::TouchLater
+  include ActiveRecord::NoTouching
+  extend ActiveRecord::NoTouching::ClassMethods
+  include ActiveRecord::Reflection
+  extend ActiveRecord::Reflection::ClassMethods
+  include ActiveRecord::Serialization
+  include ActiveModel::Serializers::JSON
+  include ActiveRecord::Store
+  extend ActiveRecord::Store::ClassMethods
+  include ActiveRecord::SecureToken
+  extend ActiveRecord::SecureToken::ClassMethods
+  include ActiveRecord::TokenFor
+  extend ActiveRecord::TokenFor::ClassMethods
+  include ActiveRecord::SignedId
+  extend ActiveRecord::SignedId::ClassMethods
+  include ActiveRecord::Suppressor
+  extend ActiveRecord::Suppressor::ClassMethods
+  include ActiveRecord::Normalization
+  extend ActiveRecord::Normalization::ClassMethods
+  include ActiveRecord::Marshalling::Methods
+  include Kaminari::ActiveRecordExtension
+  extend Kaminari::ActiveRecordExtension::ClassMethods
+  include GlobalID::Identification
+  include Draper::Decoratable
+  extend Draper::Decoratable::ClassMethods
+end
+
+module ActiveRecord::Base::GeneratedAssociationMethods
+end
+
+module ActiveRecord::Base::GeneratedAttributeMethods
+end
+
+module ActiveRecord::Base::GeneratedRelationMethods
+end
+
+module ActiveRecord::Batches
+end
+
+class ActiveRecord::Batches::BatchEnumerator
+  include Enumerable[untyped]
+end
+
+module ActiveRecord::Calculations
+end
+
+module ActiveRecord::Callbacks
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Callbacks::ClassMethods
+  include ActiveModel::Callbacks
+end
+
+module ActiveRecord::ConnectionAdapters
+  extend ActiveSupport::Autoload
+end
+
+class ActiveRecord::ConnectionAdapters::AbstractAdapter
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+  include ActiveRecord::ConnectionAdapters::Quoting
+  include ActiveRecord::ConnectionAdapters::DatabaseStatements
+  include ActiveRecord::ConnectionAdapters::SchemaStatements
+  extend ActiveRecord::ConnectionAdapters::Quoting::ClassMethods
+  include ActiveRecord::ConnectionAdapters::DatabaseLimits
+  include ActiveRecord::ConnectionAdapters::QueryCache
+  include ActiveRecord::ConnectionAdapters::Savepoints
+end
+
+class ActiveRecord::ConnectionAdapters::AbstractAdapter::SchemaCreation
+end
+
+class ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
+  include Comparable
+end
+
+module ActiveRecord::ConnectionAdapters::AbstractPool
+end
+
+class ActiveRecord::ConnectionAdapters::Column
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def precision: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def scale: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def limit: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def sql_type: (*untyped, **untyped) -> untyped
+  include ActiveRecord::ConnectionAdapters::Deduplicable
+  extend ActiveRecord::ConnectionAdapters::Deduplicable::ClassMethods
+end
+
+module ActiveRecord::ConnectionAdapters::ColumnMethods
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ConnectionAdapters::ColumnMethods::ClassMethods
+  private
+end
+
+class ActiveRecord::ConnectionAdapters::ConnectionPool
+  # defined by `delegate` to: #pool_config
+  def schema_reflection: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #pool_config
+  def server_version: (*untyped, **untyped) -> untyped
+  include MonitorMixin
+  prepend ActiveRecord::ConnectionAdapters::QueryCache::ConnectionPoolConfiguration
+  include ActiveRecord::ConnectionAdapters::AbstractPool
+end
+
+module ActiveRecord::ConnectionAdapters::ConnectionPool::BiasableQueue
+end
+
+class ActiveRecord::ConnectionAdapters::ConnectionPool::ConnectionLeasingQueue < ::ActiveRecord::ConnectionAdapters::ConnectionPool::Queue
+  include ActiveRecord::ConnectionAdapters::ConnectionPool::BiasableQueue
+end
+
+class ActiveRecord::ConnectionAdapters::ConnectionPool::Queue
+end
+
+module ActiveRecord::ConnectionAdapters::DatabaseLimits
+end
+
+module ActiveRecord::ConnectionAdapters::DatabaseStatements
+  # defined by `delegate` to: untyped#transaction_manager
+  def within_new_transaction: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def open_transactions: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def current_transaction: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def begin_transaction: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def commit_transaction: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def rollback_transaction: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def materialize_transactions: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def disable_lazy_transactions!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def enable_lazy_transactions!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: untyped#transaction_manager
+  def dirty_current_transaction: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::ConnectionAdapters::Deduplicable
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ConnectionAdapters::Deduplicable::ClassMethods
+end
+
+class ActiveRecord::ConnectionAdapters::NullPool
+  include ActiveRecord::ConnectionAdapters::AbstractPool
+end
+
+class ActiveRecord::ConnectionAdapters::PoolConfig
+  include MonitorMixin
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::Column < ::ActiveRecord::ConnectionAdapters::Column
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def oid: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#sql_type_metadata
+  def fmod: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::ColumnMethods
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Array[unchecked out Elem] < ::ActiveModel::Type::Value
+  # defined by `delegate` to: untyped#subtype
+  def type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#subtype
+  def user_input_in_time_zone: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#subtype
+  def limit: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#subtype
+  def precision: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#subtype
+  def scale: (*untyped, **untyped) -> untyped
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Hstore < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::OID::LegacyPoint < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Point < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Range[out Elem] < ::ActiveModel::Type::Value
+  # defined by `delegate` to: untyped#subtype
+  def user_input_in_time_zone: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting::ClassMethods
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::ReferentialIntegrity
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaCreation < ::ActiveRecord::ConnectionAdapters::AbstractAdapter::SchemaCreation
+  # defined by `delegate` to: #@conn
+  def quoted_include_columns_for_index: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::Table < ::ActiveRecord::ConnectionAdapters::Table
+  include ActiveRecord::ConnectionAdapters::PostgreSQL::ColumnMethods
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition < ::ActiveRecord::ConnectionAdapters::TableDefinition
+  include ActiveRecord::ConnectionAdapters::PostgreSQL::ColumnMethods
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQL::TypeMetadata
+  include ActiveRecord::ConnectionAdapters::Deduplicable
+  extend ActiveRecord::ConnectionAdapters::Deduplicable::ClassMethods
+end
+
+module ActiveRecord::ConnectionAdapters::PostgreSQL::Utils
+  extend ActiveRecord::ConnectionAdapters::PostgreSQL::Utils
+end
+
+class ActiveRecord::ConnectionAdapters::PostgreSQLAdapter < ::ActiveRecord::ConnectionAdapters::AbstractAdapter
+  def self.create_unlogged_tables: () -> untyped
+  def self.create_unlogged_tables?: () -> bool
+  def self.create_unlogged_tables=: (untyped value) -> untyped
+  def create_unlogged_tables: () -> untyped
+  def create_unlogged_tables?: () -> bool
+  def create_unlogged_tables=: (untyped value) -> untyped
+  def self.datetime_type: () -> untyped
+  def self.datetime_type?: () -> bool
+  def self.datetime_type=: (untyped value) -> untyped
+  def datetime_type: () -> untyped
+  def datetime_type?: () -> bool
+  def datetime_type=: (untyped value) -> untyped
+  def self.decode_dates: () -> untyped
+  def self.decode_dates?: () -> bool
+  def self.decode_dates=: (untyped value) -> untyped
+  def decode_dates: () -> untyped
+  def decode_dates?: () -> bool
+  def decode_dates=: (untyped value) -> untyped
+  include ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting
+  extend ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting::ClassMethods
+  include ActiveRecord::ConnectionAdapters::PostgreSQL::ReferentialIntegrity
+  include ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements
+  include ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements
+end
+
+module ActiveRecord::ConnectionAdapters::QueryCache
+end
+
+module ActiveRecord::ConnectionAdapters::QueryCache::ConnectionPoolConfiguration
+end
+
+module ActiveRecord::ConnectionAdapters::Quoting
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ConnectionAdapters::Quoting::ClassMethods
+end
+
+module ActiveRecord::ConnectionAdapters::Savepoints
+end
+
+class ActiveRecord::ConnectionAdapters::SchemaCreation
+  # defined by `delegate` to: #@conn
+  private def quote_column_name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def quote_table_name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def quote_default_expression: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def type_to_sql: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def options_include_default?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_indexes_in_create?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def use_foreign_keys?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def quoted_columns_for_index: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_partial_index?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_check_constraints?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_index_include?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_exclusion_constraints?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_unique_constraints?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@conn
+  private def supports_nulls_not_distinct?: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::ConnectionAdapters::SchemaStatements
+  include ActiveRecord::Migration::JoinTable
+end
+
+class ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+  include ActiveRecord::ConnectionAdapters::Deduplicable
+  extend ActiveRecord::ConnectionAdapters::Deduplicable::ClassMethods
+end
+
+class ActiveRecord::ConnectionAdapters::StatementPool
+  include Enumerable[untyped]
+end
+
+class ActiveRecord::ConnectionAdapters::Table
+  include ActiveRecord::ConnectionAdapters::ColumnMethods
+  extend ActiveRecord::ConnectionAdapters::ColumnMethods::ClassMethods
+end
+
+class ActiveRecord::ConnectionAdapters::TableDefinition
+  include ActiveRecord::ConnectionAdapters::ColumnMethods
+  extend ActiveRecord::ConnectionAdapters::ColumnMethods::ClassMethods
+end
+
+module ActiveRecord::ConnectionHandling
+end
+
+module ActiveRecord::Core
+  extend ActiveSupport::Concern
+
+  include ActiveModel::Access
+end
+
+module ActiveRecord::Core::ClassMethods
+end
+
+module ActiveRecord::CounterCache
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::CounterCache::ClassMethods
+end
+
+module ActiveRecord::DelegatedType
+end
+
+module ActiveRecord::Delegation
+  # defined by `delegate` to: #records
+  def to_xml: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def encode_with: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def length: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def join: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def intersect?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def []: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def &: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def |: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def +: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def -: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def sample: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def reverse: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def rotate: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def compact: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def in_groups: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def in_groups_of: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def to_sentence: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def to_fs: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def to_formatted_s: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def as_json: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def shuffle: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def split: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def slice: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def index: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #records
+  def rindex: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #klass
+  def primary_key: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #klass
+  def lease_connection: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #klass
+  def connection: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #klass
+  def with_connection: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #klass
+  def transaction: (*untyped, **untyped) -> untyped
+
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Delegation::ClassMethods
+end
+
+module ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+end
+
+module ActiveRecord::Delegation::DelegateCache
+end
+
+class ActiveRecord::DisableJoinsAssociationRelation < ::ActiveRecord::Relation
+end
+
+module ActiveRecord::DynamicMatchers
+end
+
+module ActiveRecord::Encryption
+  def self.config: () -> untyped
+
+  def config: () -> untyped
+
+  def self.encrypted_attribute_declaration_listeners: () -> untyped
+
+  def encrypted_attribute_declaration_listeners: () -> untyped
+
+  def self.default_context: () -> untyped
+
+  def default_context: () -> untyped
+
+  def self.encrypted_attribute_declaration_listeners=: (untyped val) -> untyped
+
+  def encrypted_attribute_declaration_listeners=: (untyped val) -> untyped
+
+  def self.default_context=: (untyped val) -> untyped
+
+  def default_context=: (untyped val) -> untyped
+
+  extend ActiveSupport::Autoload
+
+  include ActiveRecord::Encryption::Configurable
+
+  extend ActiveRecord::Encryption::Configurable::ClassMethods
+
+  include ActiveRecord::Encryption::Contexts
+
+  extend ActiveRecord::Encryption::Contexts::ClassMethods
+end
+
+class ActiveRecord::Encryption::Cipher
+  extend ActiveSupport::Autoload
+end
+
+module ActiveRecord::Encryption::Configurable
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Encryption::Configurable::ClassMethods
+  def key_provider: (*untyped, **untyped) { (*untyped) -> untyped } -> untyped
+
+  def key_generator: (*untyped, **untyped) { (*untyped) -> untyped } -> untyped
+
+  def cipher: (*untyped, **untyped) { (*untyped) -> untyped } -> untyped
+
+  def message_serializer: (*untyped, **untyped) { (*untyped) -> untyped } -> untyped
+
+  def encryptor: (*untyped, **untyped) { (*untyped) -> untyped } -> untyped
+
+  def frozen_encryption: (*untyped, **untyped) { (*untyped) -> untyped } -> untyped
+
+  def configure: (?primary_key: untyped, ?deterministic_key: untyped, ?key_derivation_salt: untyped, **untyped) -> untyped
+
+  def encrypted_attribute_was_declared: (untyped klass, untyped name) -> untyped
+
+  def on_encrypted_attribute_declared: () { (*untyped) -> untyped } -> untyped
+end
+
+module ActiveRecord::Encryption::Contexts
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Encryption::Contexts::ClassMethods
+  def context: () -> untyped
+
+  def current_custom_context: () -> untyped
+
+  def protecting_encrypted_data: () { (*untyped) -> untyped } -> untyped
+
+  def reset_default_context: () -> untyped
+
+  def with_encryption_context: (untyped properties) { () -> untyped } -> untyped
+
+  def without_encryption: () { (*untyped) -> untyped } -> untyped
+end
+
+module ActiveRecord::Encryption::EncryptableRecord
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Encryption::EncryptableRecord::ClassMethods
+  private
+
+  def add_length_validation_for_encrypted_columns: () -> untyped
+
+  def encrypt_attribute: (untyped name, ?key_provider: untyped, ?key: untyped, ?deterministic: untyped, ?support_unencrypted_data: untyped, ?downcase: untyped, ?ignore_case: untyped, ?previous: untyped, **untyped) -> untyped
+
+  def global_previous_schemes_for: (untyped scheme) -> untyped
+
+  def load_schema!: () -> untyped
+
+  def override_accessors_to_preserve_original: (untyped name, untyped original_attribute_name) -> untyped
+
+  def preserve_original_encrypted: (untyped name) -> untyped
+
+  def scheme_for: (?key_provider: untyped, ?key: untyped, ?deterministic: untyped, ?support_unencrypted_data: untyped, ?downcase: untyped, ?ignore_case: untyped, ?previous: untyped, **untyped) -> untyped
+
+  def validate_column_size: (untyped attribute_name) -> untyped
+end
+
+class ActiveRecord::Encryption::EncryptedAttributeType < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+module ActiveRecord::Encryption::ExtendedDeterministicQueries
+end
+
+module ActiveRecord::Encryption::ExtendedDeterministicQueries::CoreQueries
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Enum
+end
+
+module ActiveRecord::Explain
+end
+
+module ActiveRecord::FinderMethods
+end
+
+module ActiveRecord::Inheritance
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Inheritance::ClassMethods
+end
+
+class ActiveRecord::InsertAll::Builder
+  # defined by `delegate` to: untyped#insert_all
+  def skip_duplicates?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#insert_all
+  def update_duplicates?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#insert_all
+  def keys: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#insert_all
+  def keys_including_timestamps: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#insert_all
+  def record_timestamps?: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::Integration
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Integration::ClassMethods
+end
+
+module ActiveRecord::Locking::Optimistic
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Locking::Optimistic::ClassMethods
+end
+
+module ActiveRecord::Locking::Pessimistic
+end
+
+class ActiveRecord::LogSubscriber < ::ActiveSupport::LogSubscriber
+  def self.backtrace_cleaner: () -> untyped
+  def self.backtrace_cleaner?: () -> bool
+  def self.backtrace_cleaner=: (untyped value) -> untyped
+  def backtrace_cleaner: () -> untyped
+  def backtrace_cleaner?: () -> bool
+  def backtrace_cleaner=: (untyped value) -> untyped
+end
+
+module ActiveRecord::Marshalling
+end
+
+module ActiveRecord::Marshalling::Methods
+end
+
+module ActiveRecord::Migration::JoinTable
+end
+
+module ActiveRecord::ModelSchema
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ModelSchema::ClassMethods
+end
+
+module ActiveRecord::NestedAttributes
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::NestedAttributes::ClassMethods
+end
+
+module ActiveRecord::NoTouching
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::NoTouching::ClassMethods
+end
+
+module ActiveRecord::Normalization
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Normalization::ClassMethods
+end
+
+class ActiveRecord::Normalization::NormalizedValueType
+  include ActiveModel::Type::SerializeCastValue
+  extend ActiveModel::Type::SerializeCastValue::ClassMethods
+end
+
+module ActiveRecord::Persistence
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Persistence::ClassMethods
+end
+
+module ActiveRecord::QueryCache::ClassMethods
+end
+
+module ActiveRecord::QueryMethods
+  include ActiveModel::ForbiddenAttributesProtection
+end
+
+module ActiveRecord::Querying
+  # defined by `delegate` to: #all
+  def find: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_by!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def take: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def take!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def sole: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_sole_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def first: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def first!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def last: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def last!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def second: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def second!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def third: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def third!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def fourth: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def fourth!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def fifth: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def fifth!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def forty_two: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def forty_two!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def third_to_last: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def third_to_last!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def second_to_last: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def second_to_last!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def exists?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def any?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def many?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def none?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def one?: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def first_or_create: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def first_or_create!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def first_or_initialize: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_or_create_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_or_create_by!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_or_initialize_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def create_or_find_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def create_or_find_by!: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def destroy: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def destroy_all: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def delete: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def delete_all: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def update_all: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def touch_all: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def destroy_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def delete_by: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_each: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def find_in_batches: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def in_batches: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def select: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def reselect: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def order: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def regroup: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def in_order_of: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def reorder: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def group: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def limit: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def offset: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def joins: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def left_joins: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def left_outer_joins: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def where: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def rewhere: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def invert_where: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def preload: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def extract_associated: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def eager_load: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def includes: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def from: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def lock: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def readonly: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def and: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def or: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def annotate: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def optimizer_hints: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def extending: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def having: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def create_with: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def distinct: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def references: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def none: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def unscope: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def merge: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def except: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def only: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def count: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def average: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def minimum: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def maximum: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def sum: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def calculate: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def pluck: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def pick: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def ids: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_ids: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def strict_loading: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def excluding: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def without: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def with: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_count: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_average: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_minimum: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_maximum: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_sum: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_pluck: (*untyped, **untyped) -> untyped
+
+  # defined by `delegate` to: #all
+  def async_pick: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::Railties::ControllerRuntime
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Railties::ControllerRuntime::ClassMethods
+end
+
+module ActiveRecord::Railties::JobRuntime
+end
+
+module ActiveRecord::ReadonlyAttributes
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::ReadonlyAttributes::ClassMethods
+end
+
+module ActiveRecord::Reflection
+  extend ActiveSupport::Concern
+end
+
+class ActiveRecord::Reflection::AbstractReflection
+end
+
+module ActiveRecord::Reflection::ClassMethods
+end
+
+class ActiveRecord::Reflection::PolymorphicReflection < ::ActiveRecord::Reflection::AbstractReflection
+  # defined by `delegate` to: #@reflection
+  def klass: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def scope: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def plural_name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def join_primary_key: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def join_foreign_key: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def scope_for: (*untyped, **untyped) -> untyped
+end
+
+class ActiveRecord::Reflection::RuntimeReflection < ::ActiveRecord::Reflection::AbstractReflection
+  # defined by `delegate` to: #@reflection
+  def scope: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def constraints: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: #@reflection
+  def join_foreign_key: (*untyped, **untyped) -> untyped
+end
+
+class ActiveRecord::Reflection::ThroughReflection < ::ActiveRecord::Reflection::AbstractReflection
+  # defined by `delegate` to: untyped#source_reflection
+  def foreign_key: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#source_reflection
+  def foreign_type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#source_reflection
+  def association_foreign_key: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#source_reflection
+  def join_id_for: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#source_reflection
+  def type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#source_reflection
+  def active_record_primary_key: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#source_reflection
+  def join_foreign_key: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def belongs_to?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def parent_reflection: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def join_table: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def has_inverse?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def compute_class: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def association_scope_cache: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def join_primary_type: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def check_eager_loadable!: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def polymorphic_inverse_of: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def association_class: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def parent_reflection=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def macro: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def has_one?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def collection?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def extensions: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def validate?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def polymorphic_name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def polymorphic?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def plural_name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def name: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def options: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def scope_for: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def autosave=: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def active_record: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def _klass: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#delegate_reflection
+  def scope: (*untyped, **untyped) -> untyped
+end
+
+class ActiveRecord::Relation
+  include Enumerable[untyped]
+  include ActiveRecord::FinderMethods
+  include ActiveRecord::Calculations
+  include ActiveRecord::SpawnMethods
+  include ActiveRecord::QueryMethods
+  include ActiveRecord::Batches
+  include ActiveRecord::Explain
+  include ActiveRecord::Delegation
+  extend ActiveRecord::Delegation::ClassMethods
+  include ActiveRecord::SignedId::RelationMethods
+  include ActiveRecord::TokenFor::RelationMethods
+end
+
+class ActiveRecord::Relation::WhereClause
+  # defined by `delegate` to: untyped#predicates
+  def any?: (*untyped, **untyped) -> untyped
+  # defined by `delegate` to: untyped#predicates
+  def empty?: (*untyped, **untyped) -> untyped
+end
+
+module ActiveRecord::RuntimeRegistry
+  extend ActiveRecord::RuntimeRegistry
+end
+
+module ActiveRecord::Sanitization
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Sanitization::ClassMethods
+end
+
+class ActiveRecord::SchemaDumper
+  def self.ignore_tables: () -> untyped
+  def ignore_tables: () -> untyped
+  def self.fk_ignore_pattern: () -> untyped
+  def fk_ignore_pattern: () -> untyped
+  def self.chk_ignore_pattern: () -> untyped
+  def chk_ignore_pattern: () -> untyped
+  def self.excl_ignore_pattern: () -> untyped
+  def excl_ignore_pattern: () -> untyped
+  def self.unique_ignore_pattern: () -> untyped
+  def unique_ignore_pattern: () -> untyped
+  def self.ignore_tables=: (untyped val) -> untyped
+  def ignore_tables=: (untyped val) -> untyped
+  def self.fk_ignore_pattern=: (untyped val) -> untyped
+  def fk_ignore_pattern=: (untyped val) -> untyped
+  def self.chk_ignore_pattern=: (untyped val) -> untyped
+  def chk_ignore_pattern=: (untyped val) -> untyped
+  def self.excl_ignore_pattern=: (untyped val) -> untyped
+  def excl_ignore_pattern=: (untyped val) -> untyped
+  def self.unique_ignore_pattern=: (untyped val) -> untyped
+  def unique_ignore_pattern=: (untyped val) -> untyped
+end
+
+module ActiveRecord::Scoping
+end
+
+module ActiveRecord::Scoping::ClassMethods
+end
+
+module ActiveRecord::Scoping::Default
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Scoping::Default::ClassMethods
+end
+
+module ActiveRecord::Scoping::Named
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Scoping::Named::ClassMethods
+end
+
+module ActiveRecord::SecurePassword
+  extend ActiveSupport::Concern
+
+  include ActiveModel::SecurePassword
+end
+
+module ActiveRecord::SecurePassword::ClassMethods
+end
+
+module ActiveRecord::SecureToken
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::SecureToken::ClassMethods
+end
+
+module ActiveRecord::Serialization
+  extend ActiveSupport::Concern
+
+  include ActiveModel::Serializers::JSON
+end
+
+module ActiveRecord::SignedId
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::SignedId::ClassMethods
+end
+
+module ActiveRecord::SignedId::RelationMethods
+end
+
+module ActiveRecord::SpawnMethods
+end
+
+module ActiveRecord::Store
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Store::ClassMethods
+end
+
+module ActiveRecord::Suppressor
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Suppressor::ClassMethods
+end
+
+module ActiveRecord::Timestamp
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Timestamp::ClassMethods
+end
+
+module ActiveRecord::TokenFor
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::TokenFor::ClassMethods
+end
+
+module ActiveRecord::TokenFor::RelationMethods
+end
+
+module ActiveRecord::TouchLater
+end
+
+module ActiveRecord::Transactions
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Transactions::ClassMethods
+end
+
+module ActiveRecord::Translation
+end
+
+class ActiveRecord::Type::Date < ::ActiveModel::Type::Date
+  include ActiveRecord::Type::Internal::Timezone
+end
+
+class ActiveRecord::Type::DateTime < ::ActiveModel::Type::DateTime
+  include ActiveRecord::Type::Internal::Timezone
+end
+
+module ActiveRecord::Type::Internal::Timezone
+end
+
+class ActiveRecord::Type::Json < ::ActiveModel::Type::Value
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+class ActiveRecord::Type::Serialized
+  include ActiveModel::Type::Helpers::Mutable
+end
+
+class ActiveRecord::Type::Time < ::ActiveModel::Type::Time
+  include ActiveRecord::Type::Internal::Timezone
+end
+
+module ActiveRecord::Validations
+  extend ActiveSupport::Concern
+end
+
+module ActiveRecord::Validations::ClassMethods
+end

@@ -1,0 +1,2 @@
+class PullRequestDownloadsController < ::ApplicationController
+end

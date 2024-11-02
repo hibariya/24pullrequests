@@ -1,0 +1,928 @@
+class Project < ::ApplicationRecord
+  def self.not_owner: (untyped user) -> Project::ActiveRecord_Relation
+  def self.by_language: (untyped language) -> Project::ActiveRecord_Relation
+  def self.by_languages: (untyped languages) -> Project::ActiveRecord_Relation
+  def self.by_labels: (untyped labels) -> Project::ActiveRecord_Relation
+  def self.active: () -> Project::ActiveRecord_Relation
+  def self.featured: () -> Project::ActiveRecord_Relation
+  extend _ActiveRecord_Relation_ClassMethods[Project, Project::ActiveRecord_Relation, ::Integer]
+  extend Project::ActiveRecord_Persistence_ClassMethods
+  include Project::GeneratedAssociationMethods
+  include Project::GeneratedAttributeMethods
+end
+
+class Project::ActiveRecord_AssociationRelation < ::ActiveRecord::AssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include Project::GeneratedRelationMethods
+end
+
+class Project::ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+  include _ActiveRecord_Relation[Project, ::Integer]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include Project::GeneratedRelationMethods
+end
+
+class Project::ActiveRecord_DisableJoinsAssociationRelation < ::ActiveRecord::DisableJoinsAssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include Project::GeneratedRelationMethods
+end
+
+module Project::ActiveRecord_Persistence_ClassMethods
+  def create: (?id: ::Integer, ?name: ::String?, ?description: ::String?, ?github_url: ::String?, ?main_language: ::String?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, ?user_id: ::Integer?, ?inactive: bool?, ?featured: bool?, ?avatar_url: ::String?, ?contribulator: ::Integer?, ?homepage: ::String?, ?contributing_url: ::String?, ?last_scored: ::ActiveSupport::TimeWithZone?, ?fork: bool?, ?github_id: ::Integer?, **untyped) ?{ (Project) -> void } -> Project
+            | (::Array[Hash[Symbol, untyped]]) ?{ (Project) -> void } -> ::Array[Project]
+
+  def create!: (?id: ::Integer, ?name: ::String?, ?description: ::String?, ?github_url: ::String?, ?main_language: ::String?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, ?user_id: ::Integer?, ?inactive: bool?, ?featured: bool?, ?avatar_url: ::String?, ?contribulator: ::Integer?, ?homepage: ::String?, ?contributing_url: ::String?, ?last_scored: ::ActiveSupport::TimeWithZone?, ?fork: bool?, ?github_id: ::Integer?, **untyped) ?{ (Project) -> void } -> Project
+             | (::Array[Hash[Symbol, untyped]]) ?{ (Project) -> void } -> ::Array[Project]
+
+  def build: (?id: ::Integer, ?name: ::String?, ?description: ::String?, ?github_url: ::String?, ?main_language: ::String?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, ?user_id: ::Integer?, ?inactive: bool?, ?featured: bool?, ?avatar_url: ::String?, ?contribulator: ::Integer?, ?homepage: ::String?, ?contributing_url: ::String?, ?last_scored: ::ActiveSupport::TimeWithZone?, ?fork: bool?, ?github_id: ::Integer?, **untyped) ?{ (Project) -> void } -> Project
+           | (::Array[Hash[Symbol, untyped]]) ?{ (Project) -> void } -> ::Array[Project]
+end
+
+class Project::ActiveRecord_Relation < ::ActiveRecord::Relation
+  include Project::GeneratedRelationMethods
+  include _ActiveRecord_Relation[Project, ::Integer]
+  include Enumerable[Project]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+module Project::GeneratedAssociationMethods
+  def project_labels: () -> ::ProjectLabel::ActiveRecord_Associations_CollectionProxy
+
+  def project_labels=: (::ProjectLabel::ActiveRecord_Associations_CollectionProxy | Array[ProjectLabel]) -> (::ProjectLabel::ActiveRecord_Associations_CollectionProxy | Array[ProjectLabel])
+
+  def project_label_ids: () -> Array[Integer]
+
+  def project_label_ids=: (Array[Integer]) -> Array[Integer]
+
+  def labels: () -> ::Label::ActiveRecord_Associations_CollectionProxy
+
+  def labels=: (::Label::ActiveRecord_Associations_CollectionProxy | Array[Label]) -> (::Label::ActiveRecord_Associations_CollectionProxy | Array[Label])
+
+  def label_ids: () -> Array[Integer]
+
+  def label_ids=: (Array[Integer]) -> Array[Integer]
+
+  def submitted_by: () -> User?
+
+  def submitted_by=: (User?) -> User?
+
+  def reload_submitted_by: () -> User?
+
+  def build_submitted_by: (?untyped attributes) ?{ (User) -> void } -> User
+
+  def create_submitted_by: (?untyped attributes) ?{ (User) -> void } -> User
+
+  def create_submitted_by!: (?untyped attributes) ?{ (User) -> void } -> User
+end
+
+module Project::GeneratedAttributeMethods
+  attr_accessor id: ::Integer
+
+  def id_before_type_cast: () -> ::Integer
+
+  def id_for_database: () -> ::Integer
+
+  def id_came_from_user?: () -> bool
+
+  def id?: () -> bool
+
+  def id_previously_changed?: () -> bool
+
+  def id_changed?: () -> bool
+
+  def id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def id_will_change!: () -> void
+
+  def id_was: () -> ::Integer?
+
+  def id_previous_change: () -> Array[::Integer?]?
+
+  def id_previously_was: () -> ::Integer?
+
+  def restore_id!: () -> void
+
+  def clear_id_change: () -> void
+
+  def saved_change_to_id?: () -> bool
+
+  def saved_change_to_id: () -> Array[::Integer?]?
+
+  def id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_id?: () -> bool
+
+  def id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def id_in_database: () -> ::Integer?
+
+  attr_accessor name: ::String?
+
+  def name_before_type_cast: () -> ::String?
+
+  def name_for_database: () -> ::String?
+
+  def name_came_from_user?: () -> bool
+
+  def name?: () -> bool
+
+  def name_previously_changed?: () -> bool
+
+  def name_changed?: () -> bool
+
+  def name_change: () -> [ ::String?, ::String? ]
+
+  def name_will_change!: () -> void
+
+  def name_was: () -> ::String?
+
+  def name_previous_change: () -> Array[::String?]?
+
+  def name_previously_was: () -> ::String?
+
+  def restore_name!: () -> void
+
+  def clear_name_change: () -> void
+
+  def saved_change_to_name?: () -> bool
+
+  def saved_change_to_name: () -> Array[::String?]?
+
+  def name_before_last_save: () -> ::String?
+
+  def will_save_change_to_name?: () -> bool
+
+  def name_change_to_be_saved: () -> Array[::String?]?
+
+  def name_in_database: () -> ::String?
+
+  attr_accessor description: ::String?
+
+  def description_before_type_cast: () -> ::String?
+
+  def description_for_database: () -> ::String?
+
+  def description_came_from_user?: () -> bool
+
+  def description?: () -> bool
+
+  def description_previously_changed?: () -> bool
+
+  def description_changed?: () -> bool
+
+  def description_change: () -> [ ::String?, ::String? ]
+
+  def description_will_change!: () -> void
+
+  def description_was: () -> ::String?
+
+  def description_previous_change: () -> Array[::String?]?
+
+  def description_previously_was: () -> ::String?
+
+  def restore_description!: () -> void
+
+  def clear_description_change: () -> void
+
+  def saved_change_to_description?: () -> bool
+
+  def saved_change_to_description: () -> Array[::String?]?
+
+  def description_before_last_save: () -> ::String?
+
+  def will_save_change_to_description?: () -> bool
+
+  def description_change_to_be_saved: () -> Array[::String?]?
+
+  def description_in_database: () -> ::String?
+
+  attr_accessor github_url: ::String?
+
+  def github_url_before_type_cast: () -> ::String?
+
+  def github_url_for_database: () -> ::String?
+
+  def github_url_came_from_user?: () -> bool
+
+  def github_url?: () -> bool
+
+  def github_url_previously_changed?: () -> bool
+
+  def github_url_changed?: () -> bool
+
+  def github_url_change: () -> [ ::String?, ::String? ]
+
+  def github_url_will_change!: () -> void
+
+  def github_url_was: () -> ::String?
+
+  def github_url_previous_change: () -> Array[::String?]?
+
+  def github_url_previously_was: () -> ::String?
+
+  def restore_github_url!: () -> void
+
+  def clear_github_url_change: () -> void
+
+  def saved_change_to_github_url?: () -> bool
+
+  def saved_change_to_github_url: () -> Array[::String?]?
+
+  def github_url_before_last_save: () -> ::String?
+
+  def will_save_change_to_github_url?: () -> bool
+
+  def github_url_change_to_be_saved: () -> Array[::String?]?
+
+  def github_url_in_database: () -> ::String?
+
+  attr_accessor main_language: ::String?
+
+  def main_language_before_type_cast: () -> ::String?
+
+  def main_language_for_database: () -> ::String?
+
+  def main_language_came_from_user?: () -> bool
+
+  def main_language?: () -> bool
+
+  def main_language_previously_changed?: () -> bool
+
+  def main_language_changed?: () -> bool
+
+  def main_language_change: () -> [ ::String?, ::String? ]
+
+  def main_language_will_change!: () -> void
+
+  def main_language_was: () -> ::String?
+
+  def main_language_previous_change: () -> Array[::String?]?
+
+  def main_language_previously_was: () -> ::String?
+
+  def restore_main_language!: () -> void
+
+  def clear_main_language_change: () -> void
+
+  def saved_change_to_main_language?: () -> bool
+
+  def saved_change_to_main_language: () -> Array[::String?]?
+
+  def main_language_before_last_save: () -> ::String?
+
+  def will_save_change_to_main_language?: () -> bool
+
+  def main_language_change_to_be_saved: () -> Array[::String?]?
+
+  def main_language_in_database: () -> ::String?
+
+  attr_accessor created_at: ::ActiveSupport::TimeWithZone
+
+  def created_at_before_type_cast: () -> ::ActiveSupport::TimeWithZone
+
+  def created_at_for_database: () -> ::ActiveSupport::TimeWithZone
+
+  def created_at_came_from_user?: () -> bool
+
+  def created_at?: () -> bool
+
+  def created_at_previously_changed?: () -> bool
+
+  def created_at_changed?: () -> bool
+
+  def created_at_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def created_at_will_change!: () -> void
+
+  def created_at_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def created_at_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_created_at!: () -> void
+
+  def clear_created_at_change: () -> void
+
+  def saved_change_to_created_at?: () -> bool
+
+  def saved_change_to_created_at: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_created_at?: () -> bool
+
+  def created_at_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_in_database: () -> ::ActiveSupport::TimeWithZone?
+
+  attr_accessor updated_at: ::ActiveSupport::TimeWithZone
+
+  def updated_at_before_type_cast: () -> ::ActiveSupport::TimeWithZone
+
+  def updated_at_for_database: () -> ::ActiveSupport::TimeWithZone
+
+  def updated_at_came_from_user?: () -> bool
+
+  def updated_at?: () -> bool
+
+  def updated_at_previously_changed?: () -> bool
+
+  def updated_at_changed?: () -> bool
+
+  def updated_at_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def updated_at_will_change!: () -> void
+
+  def updated_at_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def updated_at_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_updated_at!: () -> void
+
+  def clear_updated_at_change: () -> void
+
+  def saved_change_to_updated_at?: () -> bool
+
+  def saved_change_to_updated_at: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_updated_at?: () -> bool
+
+  def updated_at_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_in_database: () -> ::ActiveSupport::TimeWithZone?
+
+  attr_accessor user_id: ::Integer?
+
+  def user_id_before_type_cast: () -> ::Integer?
+
+  def user_id_for_database: () -> ::Integer?
+
+  def user_id_came_from_user?: () -> bool
+
+  def user_id?: () -> bool
+
+  def user_id_previously_changed?: () -> bool
+
+  def user_id_changed?: () -> bool
+
+  def user_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def user_id_will_change!: () -> void
+
+  def user_id_was: () -> ::Integer?
+
+  def user_id_previous_change: () -> Array[::Integer?]?
+
+  def user_id_previously_was: () -> ::Integer?
+
+  def restore_user_id!: () -> void
+
+  def clear_user_id_change: () -> void
+
+  def saved_change_to_user_id?: () -> bool
+
+  def saved_change_to_user_id: () -> Array[::Integer?]?
+
+  def user_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_user_id?: () -> bool
+
+  def user_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def user_id_in_database: () -> ::Integer?
+
+  attr_accessor inactive: bool?
+
+  def inactive_before_type_cast: () -> bool?
+
+  def inactive_for_database: () -> bool?
+
+  def inactive_came_from_user?: () -> bool
+
+  def inactive?: () -> bool
+
+  def inactive_previously_changed?: () -> bool
+
+  def inactive_changed?: () -> bool
+
+  def inactive_change: () -> [ bool?, bool? ]
+
+  def inactive_will_change!: () -> void
+
+  def inactive_was: () -> bool?
+
+  def inactive_previous_change: () -> Array[bool?]?
+
+  def inactive_previously_was: () -> bool?
+
+  def restore_inactive!: () -> void
+
+  def clear_inactive_change: () -> void
+
+  def saved_change_to_inactive?: () -> bool
+
+  def saved_change_to_inactive: () -> Array[bool?]?
+
+  def inactive_before_last_save: () -> bool?
+
+  def will_save_change_to_inactive?: () -> bool
+
+  def inactive_change_to_be_saved: () -> Array[bool?]?
+
+  def inactive_in_database: () -> bool?
+
+  attr_accessor featured: bool?
+
+  def featured_before_type_cast: () -> bool?
+
+  def featured_for_database: () -> bool?
+
+  def featured_came_from_user?: () -> bool
+
+  def featured?: () -> bool
+
+  def featured_previously_changed?: () -> bool
+
+  def featured_changed?: () -> bool
+
+  def featured_change: () -> [ bool?, bool? ]
+
+  def featured_will_change!: () -> void
+
+  def featured_was: () -> bool?
+
+  def featured_previous_change: () -> Array[bool?]?
+
+  def featured_previously_was: () -> bool?
+
+  def restore_featured!: () -> void
+
+  def clear_featured_change: () -> void
+
+  def saved_change_to_featured?: () -> bool
+
+  def saved_change_to_featured: () -> Array[bool?]?
+
+  def featured_before_last_save: () -> bool?
+
+  def will_save_change_to_featured?: () -> bool
+
+  def featured_change_to_be_saved: () -> Array[bool?]?
+
+  def featured_in_database: () -> bool?
+
+  attr_accessor avatar_url: ::String?
+
+  def avatar_url_before_type_cast: () -> ::String?
+
+  def avatar_url_for_database: () -> ::String?
+
+  def avatar_url_came_from_user?: () -> bool
+
+  def avatar_url?: () -> bool
+
+  def avatar_url_previously_changed?: () -> bool
+
+  def avatar_url_changed?: () -> bool
+
+  def avatar_url_change: () -> [ ::String?, ::String? ]
+
+  def avatar_url_will_change!: () -> void
+
+  def avatar_url_was: () -> ::String?
+
+  def avatar_url_previous_change: () -> Array[::String?]?
+
+  def avatar_url_previously_was: () -> ::String?
+
+  def restore_avatar_url!: () -> void
+
+  def clear_avatar_url_change: () -> void
+
+  def saved_change_to_avatar_url?: () -> bool
+
+  def saved_change_to_avatar_url: () -> Array[::String?]?
+
+  def avatar_url_before_last_save: () -> ::String?
+
+  def will_save_change_to_avatar_url?: () -> bool
+
+  def avatar_url_change_to_be_saved: () -> Array[::String?]?
+
+  def avatar_url_in_database: () -> ::String?
+
+  attr_accessor contribulator: ::Integer?
+
+  def contribulator_before_type_cast: () -> ::Integer?
+
+  def contribulator_for_database: () -> ::Integer?
+
+  def contribulator_came_from_user?: () -> bool
+
+  def contribulator?: () -> bool
+
+  def contribulator_previously_changed?: () -> bool
+
+  def contribulator_changed?: () -> bool
+
+  def contribulator_change: () -> [ ::Integer?, ::Integer? ]
+
+  def contribulator_will_change!: () -> void
+
+  def contribulator_was: () -> ::Integer?
+
+  def contribulator_previous_change: () -> Array[::Integer?]?
+
+  def contribulator_previously_was: () -> ::Integer?
+
+  def restore_contribulator!: () -> void
+
+  def clear_contribulator_change: () -> void
+
+  def saved_change_to_contribulator?: () -> bool
+
+  def saved_change_to_contribulator: () -> Array[::Integer?]?
+
+  def contribulator_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_contribulator?: () -> bool
+
+  def contribulator_change_to_be_saved: () -> Array[::Integer?]?
+
+  def contribulator_in_database: () -> ::Integer?
+
+  attr_accessor homepage: ::String?
+
+  def homepage_before_type_cast: () -> ::String?
+
+  def homepage_for_database: () -> ::String?
+
+  def homepage_came_from_user?: () -> bool
+
+  def homepage?: () -> bool
+
+  def homepage_previously_changed?: () -> bool
+
+  def homepage_changed?: () -> bool
+
+  def homepage_change: () -> [ ::String?, ::String? ]
+
+  def homepage_will_change!: () -> void
+
+  def homepage_was: () -> ::String?
+
+  def homepage_previous_change: () -> Array[::String?]?
+
+  def homepage_previously_was: () -> ::String?
+
+  def restore_homepage!: () -> void
+
+  def clear_homepage_change: () -> void
+
+  def saved_change_to_homepage?: () -> bool
+
+  def saved_change_to_homepage: () -> Array[::String?]?
+
+  def homepage_before_last_save: () -> ::String?
+
+  def will_save_change_to_homepage?: () -> bool
+
+  def homepage_change_to_be_saved: () -> Array[::String?]?
+
+  def homepage_in_database: () -> ::String?
+
+  attr_accessor contributing_url: ::String?
+
+  def contributing_url_before_type_cast: () -> ::String?
+
+  def contributing_url_for_database: () -> ::String?
+
+  def contributing_url_came_from_user?: () -> bool
+
+  def contributing_url?: () -> bool
+
+  def contributing_url_previously_changed?: () -> bool
+
+  def contributing_url_changed?: () -> bool
+
+  def contributing_url_change: () -> [ ::String?, ::String? ]
+
+  def contributing_url_will_change!: () -> void
+
+  def contributing_url_was: () -> ::String?
+
+  def contributing_url_previous_change: () -> Array[::String?]?
+
+  def contributing_url_previously_was: () -> ::String?
+
+  def restore_contributing_url!: () -> void
+
+  def clear_contributing_url_change: () -> void
+
+  def saved_change_to_contributing_url?: () -> bool
+
+  def saved_change_to_contributing_url: () -> Array[::String?]?
+
+  def contributing_url_before_last_save: () -> ::String?
+
+  def will_save_change_to_contributing_url?: () -> bool
+
+  def contributing_url_change_to_be_saved: () -> Array[::String?]?
+
+  def contributing_url_in_database: () -> ::String?
+
+  attr_accessor last_scored: ::ActiveSupport::TimeWithZone?
+
+  def last_scored_before_type_cast: () -> ::ActiveSupport::TimeWithZone?
+
+  def last_scored_for_database: () -> ::ActiveSupport::TimeWithZone?
+
+  def last_scored_came_from_user?: () -> bool
+
+  def last_scored?: () -> bool
+
+  def last_scored_previously_changed?: () -> bool
+
+  def last_scored_changed?: () -> bool
+
+  def last_scored_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def last_scored_will_change!: () -> void
+
+  def last_scored_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def last_scored_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def last_scored_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_last_scored!: () -> void
+
+  def clear_last_scored_change: () -> void
+
+  def saved_change_to_last_scored?: () -> bool
+
+  def saved_change_to_last_scored: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def last_scored_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_last_scored?: () -> bool
+
+  def last_scored_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def last_scored_in_database: () -> ::ActiveSupport::TimeWithZone?
+
+  attr_accessor fork: bool?
+
+  def fork_before_type_cast: () -> bool?
+
+  def fork_for_database: () -> bool?
+
+  def fork_came_from_user?: () -> bool
+
+  def fork?: () -> bool
+
+  def fork_previously_changed?: () -> bool
+
+  def fork_changed?: () -> bool
+
+  def fork_change: () -> [ bool?, bool? ]
+
+  def fork_will_change!: () -> void
+
+  def fork_was: () -> bool?
+
+  def fork_previous_change: () -> Array[bool?]?
+
+  def fork_previously_was: () -> bool?
+
+  def restore_fork!: () -> void
+
+  def clear_fork_change: () -> void
+
+  def saved_change_to_fork?: () -> bool
+
+  def saved_change_to_fork: () -> Array[bool?]?
+
+  def fork_before_last_save: () -> bool?
+
+  def will_save_change_to_fork?: () -> bool
+
+  def fork_change_to_be_saved: () -> Array[bool?]?
+
+  def fork_in_database: () -> bool?
+
+  attr_accessor github_id: ::Integer?
+
+  def github_id_before_type_cast: () -> ::Integer?
+
+  def github_id_for_database: () -> ::Integer?
+
+  def github_id_came_from_user?: () -> bool
+
+  def github_id?: () -> bool
+
+  def github_id_previously_changed?: () -> bool
+
+  def github_id_changed?: () -> bool
+
+  def github_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def github_id_will_change!: () -> void
+
+  def github_id_was: () -> ::Integer?
+
+  def github_id_previous_change: () -> Array[::Integer?]?
+
+  def github_id_previously_was: () -> ::Integer?
+
+  def restore_github_id!: () -> void
+
+  def clear_github_id_change: () -> void
+
+  def saved_change_to_github_id?: () -> bool
+
+  def saved_change_to_github_id: () -> Array[::Integer?]?
+
+  def github_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_github_id?: () -> bool
+
+  def github_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def github_id_in_database: () -> ::Integer?
+end
+
+module Project::GeneratedRelationMethods
+  def not_owner: (*untyped, **untyped) -> untyped
+
+  def by_language: (*untyped, **untyped) -> untyped
+
+  def by_languages: (*untyped, **untyped) -> untyped
+
+  def by_labels: (*untyped, **untyped) -> untyped
+
+  def active: (*untyped, **untyped) -> untyped
+
+  def featured: (*untyped, **untyped) -> untyped
+
+  def __callbacks: (*untyped, **untyped) -> untyped
+
+  def defined_enums: (*untyped, **untyped) -> untyped
+
+  def counter_cached_association_names: (*untyped, **untyped) -> untyped
+
+  def _validators: (*untyped, **untyped) -> untyped
+
+  def filter_by_repository: (*untyped, **untyped) -> untyped
+
+  def find_by_github_repo: (*untyped, **untyped) -> untyped
+
+  def _reflections: (*untyped, **untyped) -> untyped
+
+  def nested_attributes_options: (*untyped, **untyped) -> untyped
+
+  include Kaminari::ConfigurationMethods::ClassMethods
+
+  include Draper::Decoratable::ClassMethods
+
+  include Kaminari::ActiveRecordExtension::ClassMethods
+
+  include ActiveRecord::Normalization::ClassMethods
+
+  include ActiveRecord::Suppressor::ClassMethods
+
+  include ActiveRecord::SignedId::ClassMethods
+
+  include ActiveRecord::TokenFor::ClassMethods
+
+  include ActiveRecord::SecureToken::ClassMethods
+
+  include ActiveRecord::Store::ClassMethods
+
+  include ActiveRecord::Reflection::ClassMethods
+
+  include ActiveRecord::NoTouching::ClassMethods
+
+  include ActiveRecord::Transactions::ClassMethods
+
+  include ActiveRecord::NestedAttributes::ClassMethods
+
+  include ActiveRecord::AutosaveAssociation::ClassMethods
+
+  include ActiveRecord::SecurePassword::ClassMethods
+
+  include ActiveModel::SecurePassword::ClassMethods
+
+  include ActiveRecord::Associations::ClassMethods
+
+  include ActiveRecord::Timestamp::ClassMethods
+
+  include ActiveModel::Validations::Callbacks::ClassMethods
+
+  include ActiveRecord::Callbacks::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Serialization::ClassMethods
+
+  include ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
+
+  include ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Write::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Read::ClassMethods
+
+  include ActiveRecord::AttributeMethods::ClassMethods
+
+  include ActiveModel::AttributeMethods::ClassMethods
+
+  include ActiveRecord::Encryption::EncryptableRecord::ClassMethods
+
+  include ActiveRecord::Locking::Optimistic::ClassMethods
+
+  include ActiveRecord::Attributes::ClassMethods
+
+  include ActiveModel::AttributeRegistration::ClassMethods
+
+  include ActiveRecord::CounterCache::ClassMethods
+
+  include ActiveRecord::Validations::ClassMethods
+
+  include ActiveRecord::Integration::ClassMethods
+
+  include ActiveRecord::Sanitization::ClassMethods
+
+  include ActiveRecord::Scoping::Named::ClassMethods
+
+  include ActiveRecord::Scoping::Default::ClassMethods
+
+  include ActiveRecord::Scoping::ClassMethods
+
+  include ActiveRecord::Inheritance::ClassMethods
+
+  include ActiveRecord::ModelSchema::ClassMethods
+
+  include ActiveRecord::ReadonlyAttributes::ClassMethods
+
+  include ActiveRecord::Persistence::ClassMethods
+
+  include ActiveRecord::Core::ClassMethods
+
+  include ActiveRecord::Aggregations::ClassMethods
+
+  include ActiveRecord::Delegation::DelegateCache
+
+  include ActiveRecord::Enum
+
+  include ActiveRecord::DelegatedType
+
+  include ActiveRecord::DynamicMatchers
+
+  include ActiveRecord::Translation
+
+  include ActiveRecord::Querying
+
+  include ActiveRecord::QueryCache::ClassMethods
+
+  include ActiveRecord::ConnectionHandling
+
+  include ActiveSupport::Benchmarkable
+
+  include ActiveModel::Conversion::ClassMethods
+
+  include ActiveModel::Validations::HelperMethods
+
+  include ActiveModel::Translation
+
+  include ActiveSupport::DescendantsTracker
+
+  include ActiveSupport::Callbacks::ClassMethods
+
+  include ActiveModel::Callbacks
+
+  include ActiveModel::Naming
+
+  include ActiveModel::Validations::ClassMethods
+
+  include ActiveSupport::DescendantsTracker::ReloadedClassesFiltering
+
+  include Orthoses::LazyTracePoint::MethodAddedHook
+
+  include Orthoses::Mixin::Hook
+
+  include Zeitwerk::ConstAdded
+
+  include Module::Concerning
+end

@@ -1,0 +1,32 @@
+module Draper
+end
+
+module Draper::AutomaticDelegation
+end
+
+module Draper::AutomaticDelegation::ClassMethods
+end
+
+module Draper::Compatibility
+end
+
+module Draper::Compatibility::ApiOnly
+end
+
+module Draper::Decoratable
+end
+
+module Draper::Decoratable::ClassMethods
+end
+
+module Draper::DecoratesAssigned
+end
+
+class Draper::Decorator
+end
+
+module Draper::HelperSupport
+end
+
+module Draper::ViewContext
+end

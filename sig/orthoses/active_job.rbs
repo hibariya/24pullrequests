@@ -1,0 +1,190 @@
+class ActiveJob::Base
+  def self.logger: () -> untyped
+  def logger: () -> untyped
+  def self.logger=: (untyped val) -> untyped
+  def logger=: (untyped val) -> untyped
+  def self.queue_name: () -> untyped
+  def self.queue_name?: () -> bool
+  def self.queue_name=: (untyped value) -> untyped
+  def self.queue_name_delimiter: () -> untyped
+  def self.queue_name_delimiter?: () -> bool
+  def self.queue_name_delimiter=: (untyped value) -> untyped
+  def self.queue_name_prefix: () -> untyped
+  def self.queue_name_prefix?: () -> bool
+  def self.queue_name_prefix=: (untyped value) -> untyped
+  def queue_name_prefix: () -> untyped
+  def queue_name_prefix?: () -> bool
+  def queue_name_prefix=: (untyped value) -> untyped
+  def self.priority: () -> untyped
+  def self.priority?: () -> bool
+  def self.priority=: (untyped value) -> untyped
+  def self.enqueue_after_transaction_commit: () -> untyped
+  def self.enqueue_after_transaction_commit=: (untyped value) -> untyped
+  def self.rescue_handlers: () -> untyped
+  def self.rescue_handlers?: () -> bool
+  def self.rescue_handlers=: (untyped value) -> untyped
+  def rescue_handlers: () -> untyped
+  def rescue_handlers?: () -> bool
+  def rescue_handlers=: (untyped value) -> untyped
+  def self.retry_jitter: () -> untyped
+  def self.retry_jitter=: (untyped value) -> untyped
+  def self.after_discard_procs: () -> untyped
+  def self.after_discard_procs?: () -> bool
+  def self.after_discard_procs=: (untyped value) -> untyped
+  def after_discard_procs: () -> untyped
+  def after_discard_procs?: () -> bool
+  def after_discard_procs=: (untyped value) -> untyped
+  def self.log_arguments: () -> untyped
+  def self.log_arguments?: () -> bool
+  def self.log_arguments=: (untyped value) -> untyped
+  include ActiveJob::Core
+  extend ActiveJob::Core::ClassMethods
+  include ActiveJob::QueueAdapter
+  extend ActiveJob::QueueAdapter::ClassMethods
+  include ActiveJob::QueueName
+  extend ActiveJob::QueueName::ClassMethods
+  include ActiveJob::QueuePriority
+  extend ActiveJob::QueuePriority::ClassMethods
+  include ActiveJob::Enqueuing
+  extend ActiveJob::Enqueuing::ClassMethods
+  include ActiveJob::Execution
+  include ActiveSupport::Rescuable
+  extend ActiveSupport::Rescuable::ClassMethods
+  extend ActiveJob::Execution::ClassMethods
+  include ActiveJob::Callbacks
+  include ActiveSupport::Callbacks
+  extend ActiveSupport::Callbacks::ClassMethods
+  extend ActiveSupport::DescendantsTracker
+  extend ActiveJob::Callbacks::ClassMethods
+  include ActiveJob::Exceptions
+  extend ActiveJob::Exceptions::ClassMethods
+  include ActiveJob::Instrumentation
+  include ActiveJob::Logging
+  include ActiveJob::Timezones
+  include ActiveJob::Translation
+  include ActiveRecord::Railties::JobRuntime
+  include ActiveJob::EnqueueAfterTransactionCommit
+end
+
+module ActiveJob::Callbacks
+  extend ActiveSupport::Concern
+
+  include ActiveSupport::Callbacks
+end
+
+module ActiveJob::Callbacks::ClassMethods
+end
+
+module ActiveJob::Core
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::Core::ClassMethods
+end
+
+module ActiveJob::EnqueueAfterTransactionCommit
+end
+
+module ActiveJob::Enqueuing
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::Enqueuing::ClassMethods
+end
+
+module ActiveJob::Exceptions
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::Exceptions::ClassMethods
+end
+
+module ActiveJob::Execution
+  extend ActiveSupport::Concern
+
+  include ActiveSupport::Rescuable
+end
+
+module ActiveJob::Execution::ClassMethods
+end
+
+module ActiveJob::Instrumentation
+  extend ActiveSupport::Concern
+end
+
+class ActiveJob::LogSubscriber < ::ActiveSupport::LogSubscriber
+  def self.backtrace_cleaner: () -> untyped
+  def self.backtrace_cleaner?: () -> bool
+  def self.backtrace_cleaner=: (untyped value) -> untyped
+  def backtrace_cleaner: () -> untyped
+  def backtrace_cleaner?: () -> bool
+  def backtrace_cleaner=: (untyped value) -> untyped
+end
+
+module ActiveJob::Logging
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::QueueAdapter
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::QueueAdapter::ClassMethods
+end
+
+module ActiveJob::QueueAdapters
+  extend ActiveSupport::Autoload
+end
+
+module ActiveJob::QueueName
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::QueueName::ClassMethods
+  def self.default_queue_name: () -> untyped
+
+  def default_queue_name: () -> untyped
+
+  def self.default_queue_name=: (untyped val) -> untyped
+
+  def default_queue_name=: (untyped val) -> untyped
+end
+
+module ActiveJob::QueuePriority
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::QueuePriority::ClassMethods
+  def self.default_priority: () -> untyped
+
+  def default_priority: () -> untyped
+
+  def self.default_priority=: (untyped val) -> untyped
+
+  def default_priority=: (untyped val) -> untyped
+end
+
+module ActiveJob::Serializers
+  def self._additional_serializers: () -> untyped
+
+  def _additional_serializers: () -> untyped
+
+  def self._additional_serializers=: (untyped val) -> untyped
+
+  def _additional_serializers=: (untyped val) -> untyped
+
+  extend ActiveSupport::Autoload
+end
+
+class ActiveJob::Serializers::ObjectSerializer
+  include Singleton
+  extend Singleton::SingletonClassMethods
+end
+
+module ActiveJob::Timezones
+  extend ActiveSupport::Concern
+end
+
+module ActiveJob::Translation
+  extend ActiveSupport::Concern
+end

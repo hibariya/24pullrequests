@@ -23,3 +23,5 @@ Thumbs.db
 # To not force .overcommit.yml on anyone.
 .overcommit.yml
 .rvmrc
+
+.gem_rbs_collection/

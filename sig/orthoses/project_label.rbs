@@ -1,0 +1,420 @@
+class ProjectLabel < ::ApplicationRecord
+  extend _ActiveRecord_Relation_ClassMethods[ProjectLabel, ProjectLabel::ActiveRecord_Relation, ::Integer]
+  extend ProjectLabel::ActiveRecord_Persistence_ClassMethods
+  include ProjectLabel::GeneratedAssociationMethods
+  include ProjectLabel::GeneratedAttributeMethods
+end
+
+class ProjectLabel::ActiveRecord_AssociationRelation < ::ActiveRecord::AssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include ProjectLabel::GeneratedRelationMethods
+end
+
+class ProjectLabel::ActiveRecord_Associations_CollectionProxy < ::ActiveRecord::Associations::CollectionProxy
+  include _ActiveRecord_Relation[ProjectLabel, ::Integer]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include ProjectLabel::GeneratedRelationMethods
+end
+
+class ProjectLabel::ActiveRecord_DisableJoinsAssociationRelation < ::ActiveRecord::DisableJoinsAssociationRelation
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+  include ProjectLabel::GeneratedRelationMethods
+end
+
+module ProjectLabel::ActiveRecord_Persistence_ClassMethods
+  def create: (?id: ::Integer, ?project_id: ::Integer?, ?label_id: ::Integer?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, **untyped) ?{ (ProjectLabel) -> void } -> ProjectLabel
+            | (::Array[Hash[Symbol, untyped]]) ?{ (ProjectLabel) -> void } -> ::Array[ProjectLabel]
+
+  def create!: (?id: ::Integer, ?project_id: ::Integer?, ?label_id: ::Integer?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, **untyped) ?{ (ProjectLabel) -> void } -> ProjectLabel
+             | (::Array[Hash[Symbol, untyped]]) ?{ (ProjectLabel) -> void } -> ::Array[ProjectLabel]
+
+  def build: (?id: ::Integer, ?project_id: ::Integer?, ?label_id: ::Integer?, ?created_at: ::ActiveSupport::TimeWithZone, ?updated_at: ::ActiveSupport::TimeWithZone, **untyped) ?{ (ProjectLabel) -> void } -> ProjectLabel
+           | (::Array[Hash[Symbol, untyped]]) ?{ (ProjectLabel) -> void } -> ::Array[ProjectLabel]
+end
+
+class ProjectLabel::ActiveRecord_Relation < ::ActiveRecord::Relation
+  include ProjectLabel::GeneratedRelationMethods
+  include _ActiveRecord_Relation[ProjectLabel, ::Integer]
+  include Enumerable[ProjectLabel]
+  include ActiveRecord::Delegation::ClassSpecificRelation
+  extend ActiveRecord::Delegation::ClassSpecificRelation::ClassMethods
+  include ApplicationRecord::GeneratedRelationMethods
+end
+
+module ProjectLabel::GeneratedAssociationMethods
+  def project: () -> Project?
+
+  def project=: (Project?) -> Project?
+
+  def reload_project: () -> Project?
+
+  def build_project: (?untyped attributes) ?{ (Project) -> void } -> Project
+
+  def create_project: (?untyped attributes) ?{ (Project) -> void } -> Project
+
+  def create_project!: (?untyped attributes) ?{ (Project) -> void } -> Project
+
+  def label: () -> Label?
+
+  def label=: (Label?) -> Label?
+
+  def reload_label: () -> Label?
+
+  def build_label: (?untyped attributes) ?{ (Label) -> void } -> Label
+
+  def create_label: (?untyped attributes) ?{ (Label) -> void } -> Label
+
+  def create_label!: (?untyped attributes) ?{ (Label) -> void } -> Label
+end
+
+module ProjectLabel::GeneratedAttributeMethods
+  attr_accessor id: ::Integer
+
+  def id_before_type_cast: () -> ::Integer
+
+  def id_for_database: () -> ::Integer
+
+  def id_came_from_user?: () -> bool
+
+  def id?: () -> bool
+
+  def id_previously_changed?: () -> bool
+
+  def id_changed?: () -> bool
+
+  def id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def id_will_change!: () -> void
+
+  def id_was: () -> ::Integer?
+
+  def id_previous_change: () -> Array[::Integer?]?
+
+  def id_previously_was: () -> ::Integer?
+
+  def restore_id!: () -> void
+
+  def clear_id_change: () -> void
+
+  def saved_change_to_id?: () -> bool
+
+  def saved_change_to_id: () -> Array[::Integer?]?
+
+  def id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_id?: () -> bool
+
+  def id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def id_in_database: () -> ::Integer?
+
+  attr_accessor project_id: ::Integer?
+
+  def project_id_before_type_cast: () -> ::Integer?
+
+  def project_id_for_database: () -> ::Integer?
+
+  def project_id_came_from_user?: () -> bool
+
+  def project_id?: () -> bool
+
+  def project_id_previously_changed?: () -> bool
+
+  def project_id_changed?: () -> bool
+
+  def project_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def project_id_will_change!: () -> void
+
+  def project_id_was: () -> ::Integer?
+
+  def project_id_previous_change: () -> Array[::Integer?]?
+
+  def project_id_previously_was: () -> ::Integer?
+
+  def restore_project_id!: () -> void
+
+  def clear_project_id_change: () -> void
+
+  def saved_change_to_project_id?: () -> bool
+
+  def saved_change_to_project_id: () -> Array[::Integer?]?
+
+  def project_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_project_id?: () -> bool
+
+  def project_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def project_id_in_database: () -> ::Integer?
+
+  attr_accessor label_id: ::Integer?
+
+  def label_id_before_type_cast: () -> ::Integer?
+
+  def label_id_for_database: () -> ::Integer?
+
+  def label_id_came_from_user?: () -> bool
+
+  def label_id?: () -> bool
+
+  def label_id_previously_changed?: () -> bool
+
+  def label_id_changed?: () -> bool
+
+  def label_id_change: () -> [ ::Integer?, ::Integer? ]
+
+  def label_id_will_change!: () -> void
+
+  def label_id_was: () -> ::Integer?
+
+  def label_id_previous_change: () -> Array[::Integer?]?
+
+  def label_id_previously_was: () -> ::Integer?
+
+  def restore_label_id!: () -> void
+
+  def clear_label_id_change: () -> void
+
+  def saved_change_to_label_id?: () -> bool
+
+  def saved_change_to_label_id: () -> Array[::Integer?]?
+
+  def label_id_before_last_save: () -> ::Integer?
+
+  def will_save_change_to_label_id?: () -> bool
+
+  def label_id_change_to_be_saved: () -> Array[::Integer?]?
+
+  def label_id_in_database: () -> ::Integer?
+
+  attr_accessor created_at: ::ActiveSupport::TimeWithZone
+
+  def created_at_before_type_cast: () -> ::ActiveSupport::TimeWithZone
+
+  def created_at_for_database: () -> ::ActiveSupport::TimeWithZone
+
+  def created_at_came_from_user?: () -> bool
+
+  def created_at?: () -> bool
+
+  def created_at_previously_changed?: () -> bool
+
+  def created_at_changed?: () -> bool
+
+  def created_at_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def created_at_will_change!: () -> void
+
+  def created_at_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def created_at_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_created_at!: () -> void
+
+  def clear_created_at_change: () -> void
+
+  def saved_change_to_created_at?: () -> bool
+
+  def saved_change_to_created_at: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_created_at?: () -> bool
+
+  def created_at_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def created_at_in_database: () -> ::ActiveSupport::TimeWithZone?
+
+  attr_accessor updated_at: ::ActiveSupport::TimeWithZone
+
+  def updated_at_before_type_cast: () -> ::ActiveSupport::TimeWithZone
+
+  def updated_at_for_database: () -> ::ActiveSupport::TimeWithZone
+
+  def updated_at_came_from_user?: () -> bool
+
+  def updated_at?: () -> bool
+
+  def updated_at_previously_changed?: () -> bool
+
+  def updated_at_changed?: () -> bool
+
+  def updated_at_change: () -> [ ::ActiveSupport::TimeWithZone?, ::ActiveSupport::TimeWithZone? ]
+
+  def updated_at_will_change!: () -> void
+
+  def updated_at_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def updated_at_previous_change: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_previously_was: () -> ::ActiveSupport::TimeWithZone?
+
+  def restore_updated_at!: () -> void
+
+  def clear_updated_at_change: () -> void
+
+  def saved_change_to_updated_at?: () -> bool
+
+  def saved_change_to_updated_at: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_before_last_save: () -> ::ActiveSupport::TimeWithZone?
+
+  def will_save_change_to_updated_at?: () -> bool
+
+  def updated_at_change_to_be_saved: () -> Array[::ActiveSupport::TimeWithZone?]?
+
+  def updated_at_in_database: () -> ::ActiveSupport::TimeWithZone?
+end
+
+module ProjectLabel::GeneratedRelationMethods
+  def __callbacks: (*untyped, **untyped) -> untyped
+
+  def _reflections: (*untyped, **untyped) -> untyped
+
+  def _validators: (*untyped, **untyped) -> untyped
+
+  def defined_enums: (*untyped, **untyped) -> untyped
+
+  def counter_cached_association_names: (*untyped, **untyped) -> untyped
+
+  include Kaminari::ConfigurationMethods::ClassMethods
+
+  include Draper::Decoratable::ClassMethods
+
+  include Kaminari::ActiveRecordExtension::ClassMethods
+
+  include ActiveRecord::Normalization::ClassMethods
+
+  include ActiveRecord::Suppressor::ClassMethods
+
+  include ActiveRecord::SignedId::ClassMethods
+
+  include ActiveRecord::TokenFor::ClassMethods
+
+  include ActiveRecord::SecureToken::ClassMethods
+
+  include ActiveRecord::Store::ClassMethods
+
+  include ActiveRecord::Reflection::ClassMethods
+
+  include ActiveRecord::NoTouching::ClassMethods
+
+  include ActiveRecord::Transactions::ClassMethods
+
+  include ActiveRecord::NestedAttributes::ClassMethods
+
+  include ActiveRecord::AutosaveAssociation::ClassMethods
+
+  include ActiveRecord::SecurePassword::ClassMethods
+
+  include ActiveModel::SecurePassword::ClassMethods
+
+  include ActiveRecord::Associations::ClassMethods
+
+  include ActiveRecord::Timestamp::ClassMethods
+
+  include ActiveModel::Validations::Callbacks::ClassMethods
+
+  include ActiveRecord::Callbacks::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Serialization::ClassMethods
+
+  include ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods
+
+  include ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Write::ClassMethods
+
+  include ActiveRecord::AttributeMethods::Read::ClassMethods
+
+  include ActiveRecord::AttributeMethods::ClassMethods
+
+  include ActiveModel::AttributeMethods::ClassMethods
+
+  include ActiveRecord::Encryption::EncryptableRecord::ClassMethods
+
+  include ActiveRecord::Locking::Optimistic::ClassMethods
+
+  include ActiveRecord::Attributes::ClassMethods
+
+  include ActiveModel::AttributeRegistration::ClassMethods
+
+  include ActiveRecord::CounterCache::ClassMethods
+
+  include ActiveRecord::Validations::ClassMethods
+
+  include ActiveRecord::Integration::ClassMethods
+
+  include ActiveRecord::Sanitization::ClassMethods
+
+  include ActiveRecord::Scoping::Named::ClassMethods
+
+  include ActiveRecord::Scoping::Default::ClassMethods
+
+  include ActiveRecord::Scoping::ClassMethods
+
+  include ActiveRecord::Inheritance::ClassMethods
+
+  include ActiveRecord::ModelSchema::ClassMethods
+
+  include ActiveRecord::ReadonlyAttributes::ClassMethods
+
+  include ActiveRecord::Persistence::ClassMethods
+
+  include ActiveRecord::Core::ClassMethods
+
+  include ActiveRecord::Aggregations::ClassMethods
+
+  include ActiveRecord::Delegation::DelegateCache
+
+  include ActiveRecord::Enum
+
+  include ActiveRecord::DelegatedType
+
+  include ActiveRecord::DynamicMatchers
+
+  include ActiveRecord::Translation
+
+  include ActiveRecord::Querying
+
+  include ActiveRecord::QueryCache::ClassMethods
+
+  include ActiveRecord::ConnectionHandling
+
+  include ActiveSupport::Benchmarkable
+
+  include ActiveModel::Conversion::ClassMethods
+
+  include ActiveModel::Validations::HelperMethods
+
+  include ActiveModel::Translation
+
+  include ActiveSupport::DescendantsTracker
+
+  include ActiveSupport::Callbacks::ClassMethods
+
+  include ActiveModel::Callbacks
+
+  include ActiveModel::Naming
+
+  include ActiveModel::Validations::ClassMethods
+
+  include ActiveSupport::DescendantsTracker::ReloadedClassesFiltering
+
+  include Orthoses::LazyTracePoint::MethodAddedHook
+
+  include Orthoses::Mixin::Hook
+
+  include Zeitwerk::ConstAdded
+
+  include Module::Concerning
+end
